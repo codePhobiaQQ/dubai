@@ -3,7 +3,7 @@ import React from 'react';
 const Find = () => {
   return (
     <div className="findEl">
-      find
+      find2
     </div>
   );
 };
