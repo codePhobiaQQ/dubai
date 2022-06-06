@@ -3,6 +3,7 @@ import logo from './../assets/Logo.svg';
 import { Link } from "react-router-dom";
 import hamburger from './../assets/Hamburger.svg';
 import man from "./../assets/man.svg"
+import Find from "../components/Find";
 
 const Header = (props) => {
   return (
@@ -13,6 +14,7 @@ const Header = (props) => {
         </Link>
         {!props.isSearch &&
           <div className="header__controllers">
+            {/*<Find />*/}
             123
           </div>
         }

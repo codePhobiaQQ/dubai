@@ -15,6 +15,13 @@ import adv5 from "../assets/ThirdPage/wifi.svg"
 import adv6 from "../assets/ThirdPage/washmachine.png"
 import adv7 from "../assets/ThirdPage/car.svg"
 
+import thing1 from "../assets/ThirdPage/clock.svg"
+import thing2 from "../assets/ThirdPage/smoking.svg"
+import thing3 from "../assets/ThirdPage/dog.svg"
+import thing4 from "../assets/ThirdPage/congrit.svg"
+import thing5 from "../assets/ThirdPage/voln.svg"
+import thing6 from "../assets/ThirdPage/bell.svg"
+
 import metka from "../assets/ThirdPage/metka.svg"
 
 import Map from "../components/Map";
@@ -80,60 +87,40 @@ const DetailPage = () => {
   ]
   const things = [
     {
-      image: adv1,
-      text: "Ocean view"
+      image: thing1,
+      text: "Check-in: 14:00-21:00"
     },
     {
-      image: adv1,
-      text: "Ocean view"
+      image: thing5,
+      text: "Nearby lake, river, other body of water"
     },
     {
-      image: adv2,
-      text: "Kitchen"
+      image: thing1,
+      text: "Check-out: 12:00"
     },
     {
-      image: adv2,
-      text: "Kitchen"
+      image: thing6,
+      text: "Carbon monoxide alarm"
     },
     {
-      image: adv3,
-      text: "Dedicated workspace"
+      image: thing2,
+      text: "No smoking"
     },
     {
-      image: adv3,
-      text: "Dedicated workspace"
+      image: thing6,
+      text: "Smoke alarm"
+    },
+    {
+      image: thing3,
+      text: "No pets"
     },
     {
       image: adv4,
-      text: "Air conditioning"
+      text: "This reservation is non-refundable"
     },
     {
-      image: adv4,
-      text: "Air conditioning"
-    },
-    {
-      image: adv5,
-      text: "Wifi"
-    },
-    {
-      image: adv5,
-      text: "Wifi"
-    },
-    {
-      image: adv6,
-      text: "Washing machine"
-    },
-    {
-      image: adv6,
-      text: "Washing machine"
-    },
-    {
-      image: adv7,
-      text: "Free on-street parking"
-    },
-    {
-      image: adv7,
-      text: "Free on-street parking"
+      image: thing4,
+      text: "No parties or events"
     },
   ]
   const navigation = [

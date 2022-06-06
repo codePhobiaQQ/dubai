@@ -196,8 +196,7 @@ body {
 
 .ApartmentsList ul li {
   width: calc(50% - var(--apart-gutter));
-  margin-bottom: 40px;
-  min-height: 300px;
+  margin-bottom: calc(var(--index) * 1.2);
 }
 
 .ApartmentsList ul li img {
@@ -486,6 +485,13 @@ body {
   width: 50%;
   margin-bottom: calc(var(--index) * .6);
   font-family: "SF500", sans-serif;
+}
+
+.DetailPageThings ul li:nth-child(8) img {
+  opacity: 0;
+}
+.DetailPageThings ul li:nth-child(8) {
+  color: var(--accent-color);
 }
 
 .DetailPageWhat ul li img,

@@ -1,28 +1,33 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 const Where = (props) => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false)
-
   const whereHandler = (e) => {
-    props.setWhatOpen(1)
-    console.log(e.target.value)
-    if (e.target.value.length > 0 && isPopupOpen == false) {
-      setIsPopupOpen(true)
+    if (e.target.value.length > 0 && props.whatOpen != 1) {
+      props.setWhatOpen(1)
+    } else if (e.target.value.length > 0 == 0) {
+      props.setWhatOpen(0)
     }
   }
 
-  console.log("here")
-
   return (
     <div className="findEl__input">
-      <input onChange={(e) => whereHandler(e)} placeholder="Where are you going?" />
-      <div className={isPopupOpen ? "wherePopup active popup" : "wherePopup popup"}>
+      <div className={props.whatOpen == 1 ? "findEl__where-label active" : "findEl__where-label"}>
+        Where are you going?
+      </div>
+      <input onClick={whereHandler} onChange={whereHandler} placeholder="Where are you going?" />
+      <div className={props.whatOpen == 1 ? "wherePopup active popup" : "wherePopup popup"}>
         <ul>
           <li>
             Burj Al Arab
           </li>
           <li>
             Jumeirah Burj Al Arab
+          </li>
+          <li>
+            Dubai Burj Al Arab
+          </li>
+          <li>
+            Dubai Burj Al Arab
           </li>
           <li>
             Dubai Burj Al Arab

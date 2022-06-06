@@ -1,26 +1,31 @@
 import React, {useState} from 'react';
 import Result from "./Result";
 import Where from "./Where";
+import Guests from "./Guests";
 
 const Find = () => {
-  const [whatFindOpen, setWhatOpen] = useState(-1)
+  const [whatOpen, setWhatOpen] = useState(0)
+
+  const clickWrapperHandler = () => {
+    if (whatOpen != 0) {
+      setWhatOpen(0)
+    }
+  }
 
   return (
-    <div className="findEl">
-      <Where setWhatOpen={setWhatOpen} />
-      <div className="findEl__input">
-        <div onChange={() => setWhatOpen(2)}>
-          Dates
+    <>
+      <div onClick={clickWrapperHandler} className={whatOpen == 0 ? "helpWrapper" : "helpWrapper active"}></div>
+      <div className="findEl">
+        <Where setWhatOpen={setWhatOpen} whatOpen={whatOpen} />
+        <div className="findEl__input">
+          <div onChange={() => setWhatOpen(2)}>
+            Dates
+          </div>
         </div>
-
+        <Guests setWhatOpen={setWhatOpen} whatOpen={whatOpen} />
+        <Result />
       </div>
-      <div className="findEl__input">
-        <div onChange={() => setWhatOpen(3)}>
-          Guests
-        </div>
-      </div>
-      <Result />
-    </div>
+    </>
   );
 };
 
