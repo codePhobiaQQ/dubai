@@ -77,6 +77,65 @@ const DetailPage = () => {
     },
   ]
 
+  const things = [
+    {
+      image: adv1,
+      text: "Ocean view"
+    },
+    {
+      image: adv1,
+      text: "Ocean view"
+    },
+    {
+      image: adv2,
+      text: "Kitchen"
+    },
+    {
+      image: adv2,
+      text: "Kitchen"
+    },
+    {
+      image: adv3,
+      text: "Dedicated workspace"
+    },
+    {
+      image: adv3,
+      text: "Dedicated workspace"
+    },
+    {
+      image: adv4,
+      text: "Air conditioning"
+    },
+    {
+      image: adv4,
+      text: "Air conditioning"
+    },
+    {
+      image: adv5,
+      text: "Wifi"
+    },
+    {
+      image: adv5,
+      text: "Wifi"
+    },
+    {
+      image: adv6,
+      text: "Washing machine"
+    },
+    {
+      image: adv6,
+      text: "Washing machine"
+    },
+    {
+      image: adv7,
+      text: "Free on-street parking"
+    },
+    {
+      image: adv7,
+      text: "Free on-street parking"
+    },
+  ]
+
   return (
     <Header>
       <section className="DetailPageMain">
@@ -148,24 +207,43 @@ const DetailPage = () => {
         </div>
       </section>
 
-      <section className="DetailPageThings">
+      <section className="DetailPageWhere">
         <div className="container">
           <div className="inner-left-container">
             <h3>Where you`ll live</h3>
             <div className="map">
               <Map />
             </div>
-            <div className="DetailPageThings__content">
+            <div className="DetailPageWhere__content">
               <img src={metka} alt="metka"/>
               <p>
                 Deluxe Marina Flat, Al Maha, a Luxury Collection
-                Desert Resort & Spa, Dubai 1 Sheikh Mohammed bin
+                Desert Resort & Spa, <br />
+                Dubai 1 Sheikh Mohammed bin
                 Rashid Blvd - Downtown Dubai - Dubai
               </p>
             </div>
           </div>
         </div>
       </section>
+
+      <section className="DetailPageThings">
+        <div className="container">
+          <div className="inner-left-container">
+            <h3>What this place offers</h3>
+            <ul>
+              {things.map((thing, index) => (
+                <li key={"thing" + index}>
+                  {thing.image && <img src={thing.image} alt={"Thing" + index} />}
+                  <span>{thing.text}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
     </Header>
   );
 };

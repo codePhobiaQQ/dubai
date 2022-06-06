@@ -154,6 +154,9 @@ body {
   height: calc(100% - var(--header-height));
 }
 
+
+
+
 /*----- ApartmentsList -----*/
 
 .ApartmentsList {
@@ -372,27 +375,31 @@ body {
 
 
 .DetailPageWhat .inner-left-container,
+.DetailPageWhere .inner-left-container,
 .DetailPageThings .inner-left-container {
   padding: calc(var(--index) * 1.7) 0;
   border-bottom: 1px solid #292929;
 }
 
 .DetailPageWhat h3,
+.DetailPageWhere h3,
 .DetailPageThings h3 {
   font-size: calc(var(--index) * 1.2);
   font-family: "OS600", sans-serif;
   color: #eee;
-  margin-bottom: calc(var(--index) * .8);
+  margin-bottom: calc(var(--index) * 1);
 }
 
-.DetailPageWhat ul {
+.DetailPageWhat ul,
+.DetailPageThings ul {
   display: flex;
   flex-wrap: wrap;
   width: 70%;
   justify-content: space-between;
 }
 
-.DetailPageWhat ul li {
+.DetailPageWhat ul li,
+.DetailPageThings ul li{
   display: flex;
   align-items: center;
   color: #D0D0D0;
@@ -401,12 +408,14 @@ body {
   font-family: "SF500", sans-serif;
 }
 
-.DetailPageWhat ul li img {
+.DetailPageWhat ul li img,
+.DetailPageThings ul li img {
   height: calc(var(--index) * 1.1);
   margin-right: calc(var(--index) * .7);
 }
 
-.DetailPageWhat ul li span {
+.DetailPageWhat ul li span,
+.DetailPageThings ul li span {
   font-size: var(--third-page-text);
 }
 
@@ -433,7 +442,7 @@ body {
 .DetailPageThings {
 
 }
-.DetailPageThings .map {
+.DetailPageWhere .map {
   width: 100%;
   height: calc(var(--index) * 13);
   background-color: red;
@@ -441,26 +450,31 @@ body {
   overflow: hidden;
 }
 
-.DetailPageThings .map .mapWrapper {
+.DetailPageWhere .map .mapWrapper {
   width: 100%;
   height: 100%;
 }
 
-.DetailPageThings__content {
+.DetailPageWhere__content {
   display: flex;
   margin-top: calc(var(--third-page-text));
 }
 
-.DetailPageThings__content img {
+.DetailPageWhere__content img {
   height: calc(var(--index) * 1);
   width: calc(var(--index) * 1);;
 }
 
-.DetailPageThings__content p {
+.DetailPageWhere__content p {
   font-size: var(--third-page-text);
   color: rgba(208, 208, 208, 1);
   width: 70%;
   font-family: "SF500", sans-serif;
   margin-left: calc(var(--index) * 0.17);
   line-height: calc(var(--third-page-text) * 1.6);
+}
+
+
+.DetailPageThings {
+  border-bottom: 0;
 }
