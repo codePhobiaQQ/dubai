@@ -11,29 +11,31 @@ const Header = (props) => {
         <Link className="header__logo" to="/">
           <img  src={logo} alt="Logo"/>
         </Link>
-        <div className="header__controllers">
-          123
-        </div>
+        {!props.isSearch &&
+          <div className="header__controllers">
+            123
+          </div>
+        }
         {!props.isSearch
           ?
-        <div className="header__info">
-          <span className="header__info-who">
-            Yura Karmakov
-          </span>
-          <span>
-            <img src={hamburger} alt="hamburger"/>
-          </span>
-        </div>
-          :
-        <div className="header__info header__info_man">
-          <span className="header__info-who header__info-who_man">
-            <img src={man} alt="man"/>
-          </span>
-          <span>
-            <img src={hamburger} alt="hamburger"/>
-          </span>
-        </div>
-          }
+          <div className="header__info">
+            <span className="header__info-who">
+              Yura Karmakov
+            </span>
+            <span>
+              <img src={hamburger} alt="hamburger"/>
+            </span>
+          </div>
+            :
+          <div className="header__info header__info_man">
+            <span className="header__info-who header__info-who_man">
+              <img src={man} alt="man"/>
+            </span>
+            <span>
+              <img src={hamburger} alt="hamburger"/>
+            </span>
+          </div>
+        }
       </header>
       {props.children}
     </>

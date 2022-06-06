@@ -9,6 +9,11 @@
   text-align: center;
 }
 
+.SearchPage .content {
+  width: 100%;
+  margin-top: -15%;
+}
+
 .SearchPage h1 {
   font-size: calc(var(--index) * 3.1);
   font-family: "OS500", sans-serif;
@@ -24,4 +29,43 @@
   margin-bottom: calc(var(--index) * 1.2);
 }
 
+.SearchPage .findEl {
+  padding: calc(var(--index) * 1.1) calc(var(--index) * 1);
+  width: 80%;
+  background: #121212;
+  margin: auto;
+}
 
+.SearchPage .findEl {
+  display: flex;
+  justify-content: space-between;
+}
+
+.SearchPage .findEl__input {
+  width: calc(25% - var(--index) * 0.15);
+  height: calc(var(--index) * 2);
+  background-color: #1F1F1F;
+  color: #838383;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--index) * .9);
+  font-size: var(--third-page-text);
+  font-family: "SF500", sans-serif;
+
+}
+
+.SearchPage .findEl__input:last-child {
+  justify-content: center;
+  background-color: var(--accent-color);
+}
+
+.SearchPage .findEl__input:last-child a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #181818;
+}
+
+.SearchPage .findEl__input:last-child img {
+  margin-right: calc(var(--index) * .3);
+}
