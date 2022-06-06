@@ -219,7 +219,7 @@ const DetailPage = () => {
                   </div>
                   <div className="DetailPageInfo__row-el">
                     {/*<span className="DetailPageInfo__row-el-inner">*/}
-                    {/*  Guests*/}
+                    {/*  Result*/}
                     {/*</span>*/}
                     {/*<span className="DetailPageInfo__row-el-inner">*/}
                     {/*  2 guests*/}

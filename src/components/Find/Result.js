@@ -2,7 +2,7 @@ import React from 'react';
 import lupa from "../../assets/lupa.svg";
 import {Link} from "react-router-dom";
 
-const Guests = () => {
+const Result = () => {
   return (
     <Link className="findEl__input" to="/result">
       <img src={lupa} alt="Lupa"/>
@@ -11,4 +11,4 @@ const Guests = () => {
   );
 };
 
-export default Guests;
+export default Result;

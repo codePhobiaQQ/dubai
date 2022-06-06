@@ -57,6 +57,7 @@
   font-size: var(--third-page-text);
   font-family: "SF500", sans-serif;
   cursor: pointer;
+  position: relative;
 }
 
 .SearchPage .findEl__input input {
@@ -83,4 +84,36 @@
 .SearchPage .findEl__input:last-child img {
   width: calc(var(--index) * .6);;
   margin-right: calc(var(--index) * .3);
+}
+
+.SearchPage .findEl__input:first-child .popup {
+  position: absolute;
+  background-color: #1F1F1F;
+  left: 0;
+  top: calc(100% + var(--index) / 2);
+  width: calc(var(--index) * 20);
+  max-height: calc(var(--index) * 10);
+  padding: calc(var(--index) * 0.66);
+  text-align: left;
+  border-radius: 4px;
+}
+
+.SearchPage .wherePopup ul {
+  overflow: auto;
+}
+
+.SearchPage .wherePopup li {
+  padding: calc(var(--index) * 0.66) 0;
+  border-bottom: 1px solid #292929;
+  font-family: "SF500", sans-serif;
+  color: #eee;
+}
+
+.SearchPage .wherePopup li:first-child {
+  padding-top: 0;
+}
+
+.SearchPage .wherePopup li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
 }

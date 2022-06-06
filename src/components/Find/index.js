@@ -1,21 +1,25 @@
 import React, {useState} from 'react';
-import Guests from "./Guests";
+import Result from "./Result";
+import Where from "./Where";
 
 const Find = () => {
   const [whatFindOpen, setWhatOpen] = useState(-1)
 
   return (
     <div className="findEl">
+      <Where setWhatOpen={setWhatOpen} />
       <div className="findEl__input">
-        <input onChange={() => setWhatOpen(1)} placeholder="Where are you going?" />
+        <div onChange={() => setWhatOpen(2)}>
+          Dates
+        </div>
+
       </div>
       <div className="findEl__input">
-        <input onChange={() => setWhatOpen(2)} placeholder="Dates" />
+        <div onChange={() => setWhatOpen(3)}>
+          Guests
+        </div>
       </div>
-      <div className="findEl__input">
-        <input onChange={() => setWhatOpen(3)} placeholder="Guests" />
-      </div>
-      <Guests />
+      <Result />
     </div>
   );
 };
