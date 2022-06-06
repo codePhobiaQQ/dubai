@@ -2,7 +2,7 @@ import React from 'react';
 
 const Find = () => {
   return (
-    <div>
+    <div className="findEl">
       find
     </div>
   );
