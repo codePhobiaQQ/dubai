@@ -52,10 +52,20 @@
   color: #838383;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: calc(var(--index) * .9);
   font-size: var(--third-page-text);
   font-family: "SF500", sans-serif;
+  cursor: pointer;
+}
 
+.SearchPage .findEl__input input {
+  box-shadow: none;
+  outline: none;
+  background-color: transparent;
+  border: 0;
+  width: 80%;
+  color: #838383;
 }
 
 .SearchPage .findEl__input:last-child {
@@ -63,13 +73,14 @@
   background-color: var(--accent-color);
 }
 
-.SearchPage .findEl__input:last-child a {
-  text-decoration: none;
+.SearchPage .findEl__input:last-child {
   display: flex;
   align-items: center;
+  text-decoration: none;
   color: #181818;
 }
 
 .SearchPage .findEl__input:last-child img {
+  width: calc(var(--index) * .6);;
   margin-right: calc(var(--index) * .3);
 }

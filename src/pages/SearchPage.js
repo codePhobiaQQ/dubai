@@ -1,6 +1,4 @@
 import React from 'react';
-import Map from "../components/Map";
-import ApartmentsList from "../components/ApartmentsList";
 import bgc from "../assets/back-one.jpg"
 import Header from "../hoc/Header";
 import Find from "../components/Find";
@@ -19,6 +17,8 @@ const SearchPage = () => {
             <Find />
           </div>
         </section>
+
+       {/*<DataRangePicker />*/}
       </Header>
     </div>
   );

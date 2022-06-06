@@ -1,25 +1,21 @@
-import React from 'react';
-import lupa from './../../assets/lupa.svg';
-import {Link} from "react-router-dom";
+import React, {useState} from 'react';
+import Guests from "./Guests";
 
 const Find = () => {
+  const [whatFindOpen, setWhatOpen] = useState(-1)
+
   return (
     <div className="findEl">
       <div className="findEl__input">
-        Where are you going?
+        <input onChange={() => setWhatOpen(1)} placeholder="Where are you going?" />
       </div>
       <div className="findEl__input">
-        Dates
+        <input onChange={() => setWhatOpen(2)} placeholder="Dates" />
       </div>
       <div className="findEl__input">
-        Guests
+        <input onChange={() => setWhatOpen(3)} placeholder="Guests" />
       </div>
-      <div className="findEl__input">
-        <Link to="/result">
-          <img src={lupa} alt="Lupa"/>
-          <span>Search</span>
-        </Link>
-      </div>
+      <Guests />
     </div>
   );
 };
