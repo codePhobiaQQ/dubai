@@ -1,0 +1,27 @@
+/*----- SearchPage -----*/
+
+.SearchPage {
+  height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  color: #eee;
+  justify-content: center;
+  text-align: center;
+}
+
+.SearchPage h1 {
+  font-size: calc(var(--index) * 3.1);
+  font-family: "OS500", sans-serif;
+  margin-bottom: calc(var(--index) * .47);
+}
+
+.SearchPage p {
+  width: calc(var(--index) * 20);
+  font-size: calc(var(--third-page-text) * 1.2);
+  line-height: calc(var(--third-page-text) * 1.8);;
+  font-family: "SF500", sans-serif;
+  margin: auto;
+  margin-bottom: calc(var(--index) * 1.2);
+}
+
+

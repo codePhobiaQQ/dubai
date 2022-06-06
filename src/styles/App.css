@@ -116,12 +116,21 @@ body {
   cursor: pointer;
 }
 
+.header__info_man {
+  height: calc(var(--header--button-info-height));
+  width: calc(var(--header--button-info-height) * 2.5);
+  border-radius: var(--header--button-info-height);
+}
+
 .header__info span:first-child {
   width: 77%;
   text-align: center;
   font-family: "SF500", sans-serif;
   color: #838383;
   font-size: calc(var(--header--button-info-height) / 2.5);
+}
+.header__info_man span:first-child {
+  width: 50%;
 }
 
 .header__info span:last-child {
@@ -133,7 +142,17 @@ body {
   height: 100%;
 }
 
+.header__info_man span:last-child {
+  width: 50%;
+}
+
 .header__info span:last-child img {
+  width: calc(var(--header--button-info-height) / 2);
+  height: calc(var(--header--button-info-height) / 2);
+  margin-left: -2px;
+}
+
+.header__info_man span img {
   width: calc(var(--header--button-info-height) / 2);
   height: calc(var(--header--button-info-height) / 2);
   margin-left: -2px;
@@ -145,17 +164,6 @@ body {
   height: calc(100vh - var(--header-height));
   width: 50%;
 }
-
-/*----- SearchPage -----*/
-
-.SearchPage {
-  display: flex;
-  justify-content: space-between;
-  height: calc(100% - var(--header-height));
-}
-
-
-
 
 /*----- ApartmentsList -----*/
 
@@ -475,6 +483,6 @@ body {
 }
 
 
-.DetailPageThings {
+.DetailPageThings .inner-left-container {
   border-bottom: 0;
 }
