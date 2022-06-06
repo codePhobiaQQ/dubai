@@ -36,16 +36,22 @@
 
 :root {
   --accent-color: #A18C50;
-  --header-height: 82px;
+
   --index: calc(1vh + 1vw);
   --bgc: #121212;
-  --gutter: 29px;
+
   --apart-gutter: 14px;
   --card-width: 50%;
   --color-text: #eee;
 
+  --header-height: calc(var(--index) * 2.7);
+  --gutter: calc(var(--index) * 1);
+
   --apart--button-height: calc(var(--index) * 1.27);
   --apart--button-widht: calc(var(--apart--button-height) * 170 / 38);
+
+  --header--button-info-height: calc(var(--index) * 1.27);
+  --header--button-info-widht: calc(var(--apart--button-height) * 170 / 38);
 }
 
 * {
@@ -76,7 +82,52 @@ body {
 
 .header {
   height: var(--header-height);
-  padding: 16px var(--gutter)
+  padding: calc(var(--gutter) / 2) var(--gutter);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  height: 100%;
+}
+
+.header__logo img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.header__info {
+  width: var(--header--button-info-widht);
+  height: var(--header--button-info-height);
+  border-radius: var(--header--button-info-height);
+  background: #1F1F1F;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header__info span:first-child {
+  width: 77%;
+  text-align: center;
+  font-family: "SF500", sans-serif;
+  color: #838383;
+  font-size: calc(var(--header--button-info-height) / 2.5);
+}
+
+.header__info span:last-child {
+  width: 23%;
+  align-items: center;
+  border-left: 1px solid #131313;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.header__info span:last-child img {
+  width: calc(var(--header--button-info-height) / 2);
+  height: calc(var(--header--button-info-height) / 2);
+  margin-left: -2px;
 }
 
 /*----- Map -----*/
@@ -99,7 +150,8 @@ body {
 .ApartmentsList {
   width: calc(100% - var(--card-width));
   height: calc(100vh - var(--header-height));
-  padding: 74px var(--gutter) 24px var(--gutter);
+  padding: 74px 3px 24px var(--gutter);
+  margin-right: calc(var(--gutter) - 3px);
   overflow: auto;
   color: #fff;
 }
@@ -144,7 +196,7 @@ body {
   font-size: calc(var(--index) * .7);
   letter-spacing: -0.41px;
   color: #EEEEEE;
-  margin-bottom: calc(var(--index) * .4);
+  margin-bottom: calc(var(--index) * .3);
 }
 
 .ApartmentsList__content-left-info span {
@@ -182,3 +234,5 @@ body {
   font-size: calc(var(--index) * .5);
   opacity: .6;
 }
+
+/*----- Third Page -----*/
