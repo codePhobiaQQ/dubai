@@ -1,5 +1,9 @@
 /*----- SearchPage -----*/
 
+.search__wrapper {
+
+}
+
 .SearchPage {
   height: calc(100vh - var(--header-height));
   display: flex;
@@ -42,7 +46,7 @@
 }
 
 .SearchPage .findEl__input {
-  width: calc(25% - var(--index) * 0.15);
+  width: calc(25% - var(--index) * 0.5);
   height: calc(var(--index) * 2);
   background-color: #1F1F1F;
   color: #838383;

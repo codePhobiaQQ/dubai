@@ -180,6 +180,7 @@ body {
   font-size: calc(var(--index) * 1.55);
   font-family: "OS600", sans-serif;
   margin-bottom: 15px;
+  text-align: left;
 }
 
 .ApartmentsList ul {
@@ -222,6 +223,7 @@ body {
 .ApartmentsList__content-left-info span {
   display: block;
   font-family: "SF400", sans-serif;
+  text-align: left;
   font-size: calc(var(--index) * .6);
   color: #838383;
   margin-bottom: calc(var(--index) * .14);

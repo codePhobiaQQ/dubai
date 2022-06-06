@@ -42,16 +42,7 @@ const ApartmentsList = () => {
       price: "12 280",
       nights: "6",
       image: apart4
-    },
-    {
-      name: "Deluxe Marina Flat",
-      rooms: "2 rooms",
-      size: "170 m2",
-      date: "26 May – 4 June",
-      price: "12 280",
-      nights: "6",
-      image: apart1
-    },
+    }
   ]
 
   return (
