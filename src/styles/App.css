@@ -412,7 +412,7 @@ body {
   background-color: var(--accent-color);
 }
 
-.DetailPageInfo span:after {
+.DetailPageInfo .DetailPageInfo__more:after {
   content: '';
   position: absolute;
   transition: background-color .3s ease-in-out;
@@ -424,8 +424,8 @@ body {
 }
 
 
-.DetailPageInfo span:after {
-  display: none !important;
+.DetailPageInfo .DetailPageInfo__order-info span:after {
+  display: none;
 }
 
 .DetailPageInfo .DetailPageInfo__order-info {
