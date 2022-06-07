@@ -14,6 +14,7 @@
   padding-left: calc(var(--index) * .9);
 }
 
+
 .findEl_second .findEl__input:last-child {
   padding-left: 0;
 }

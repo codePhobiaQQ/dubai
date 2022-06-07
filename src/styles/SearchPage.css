@@ -126,7 +126,7 @@
   color: #eee;
   max-height: 0;
   opacity: 0;
-  transition: all .3s ease-in-out;
+  transition: all .3s ease;
 }
 .findEl__guest-amount.active, .findEl__where-label.active {
   margin-top: 3px;
@@ -135,7 +135,7 @@
 }
 
 .findEl__where-label.active {
-
+  margin-top: 0;
 }
 
 
@@ -250,9 +250,6 @@
 }
 
 
-
-
-
 .wherePopup ul {
 
 }
@@ -288,5 +285,9 @@
   height: 100%;
 }
 
+/* ----- datePopup ------ */
 
+.findEl__input .datePopup {
+  width: calc(200% + var(--index) * 0.7);
+}
 
