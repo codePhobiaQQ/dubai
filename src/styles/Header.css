@@ -5,8 +5,8 @@
 }
 
 .findEl_second {
-  padding: 0;
   height: 100%;
+  padding: 0 calc(var(--index) * .9);
 }
 
 .findEl_second .findEl__input {
