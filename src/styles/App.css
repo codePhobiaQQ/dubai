@@ -223,7 +223,7 @@ body {
   margin-bottom: calc(var(--index) * .3);
 }
 
-.ApartmentsList__content-left-info span {
+.ApartmentsList__content-left-info .ApartmentsList__inner-text {
   display: block;
   font-family: "SF400", sans-serif;
   text-align: left;
@@ -232,7 +232,11 @@ body {
   margin-bottom: calc(var(--index) * .14);
 }
 
-.ApartmentsList__content-left-info span:last-child {
+.ApartmentsList__content-left-info span:first-child {
+  margin-right: calc(var(--index) * 0.4);
+}
+
+.ApartmentsList__content-left-info .ApartmentsList__inner-text:last-child {
   margin-bottom: 0;
 }
 

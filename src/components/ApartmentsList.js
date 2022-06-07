@@ -70,13 +70,13 @@ const ApartmentsList = () => {
               <div className="ApartmentsList__content-left">
                 <h3 className="ApartmentsList__name">{apart.name}</h3>
                 <div className="ApartmentsList__content-left-info">
-                  <span>
-                    {apart.rooms + " "}
-                    {apart.size}
-                  </span>
-                  <span>
+                  <div className="ApartmentsList__inner-text">
+                    <span>{apart.rooms}</span>
+                    <span>{apart.size}</span>
+                  </div>
+                  <div className="ApartmentsList__inner-text">
                     {apart.date}
-                  </span>
+                  </div>
                 </div>
               </div>
               <div className="ApartmentsList__content-right">
