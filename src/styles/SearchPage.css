@@ -63,6 +63,7 @@
   font-family: "SF500", sans-serif;
   cursor: pointer;
   position: relative;
+  border-radius: 4px;
   text-align: left;
 }
 
