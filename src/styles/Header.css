@@ -7,6 +7,7 @@
 .findEl_second {
   padding: 0;
   height: 100%;
+  width: 100%;
 }
 
 .findEl_second .findEl__input {
