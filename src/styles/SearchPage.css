@@ -69,6 +69,8 @@
 
 .findEl__input:first-child {
   flex-direction: column;
+  justify-content: center;
+  padding: 0;
 }
 
 .findEl__input input {
@@ -77,8 +79,38 @@
   background-color: transparent;
   border: 0;
   font-size: var(--third-page-text);
-  width: 95%;
+  width: 100%;
+  height: 100%;
   color: #838383;
+  padding-left: calc(var(--index) * .9);
+}
+
+.findEl__input input.active {
+  height: var(--third-page-text);
+  margin-top: calc(var(--index) * .2);
+}
+
+.findEl__input-delete {
+  position: absolute;
+  right: calc(var(--index) * .5);
+  top: calc(50% - var(--index) * .33);;
+  width: calc(var(--index) * .66);
+  height: calc(var(--index) * .66);
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s ease-in-out;
+  z-index: 10;
+}
+
+.findEl__input-delete.active {
+  opacity: 1;
+  pointer-events: inherit;
+}
+
+.findEl__input-delete img {
+  object-fit: contain;
+  width: calc(var(--index) * .66);
+  height: calc(var(--index) * .66);
 }
 
 .findEl__input-label {
@@ -86,7 +118,8 @@
 }
 
 .findEl__where-label {
-  width: 95%;
+  width: 100%;
+  padding-left: calc(var(--index) * .9);
 }
 
 .findEl__guest-amount, .findEl__where-label {
@@ -100,6 +133,11 @@
   max-height: 30px;
   opacity: 1;
 }
+
+.findEl__where-label.active {
+
+}
+
 
 .findEl__input:last-child {
   justify-content: center;
@@ -138,6 +176,7 @@
 .findEl__input .popup.active {
   opacity: 1;
   transform: translateY(0);
+  z-index: 100;
   pointer-events: inherit;
 }
 
@@ -244,7 +283,10 @@
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 99;
   left: 0;
   height: 100%;
 }
+
+
 

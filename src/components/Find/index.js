@@ -3,7 +3,7 @@ import Result from "./Result";
 import Where from "./Where";
 import Guests from "./Guests";
 
-const Find = () => {
+const Find = (props) => {
   const [whatOpen, setWhatOpen] = useState(0)
 
   const clickWrapperHandler = () => {
@@ -15,7 +15,7 @@ const Find = () => {
   return (
     <>
       <div onClick={clickWrapperHandler} className={whatOpen == 0 ? "helpWrapper" : "helpWrapper active"}></div>
-      <div className="findEl">
+      <div className={props.isMain ? "findEl" : "findEl findEl_second"}>
         <Where setWhatOpen={setWhatOpen} whatOpen={whatOpen} />
         <div className="findEl__input">
           <div onChange={() => setWhatOpen(2)}>

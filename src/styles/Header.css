@@ -1,0 +1,14 @@
+.header__controllers {
+  height: 100%;
+  width: 80%;
+  max-width: 1150px;
+}
+
+.findEl_second {
+  padding: 0;
+  height: 100%;
+}
+
+.findEl_second .findEl__input {
+  height: 100%;
+}
