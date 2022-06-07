@@ -14,7 +14,7 @@ const Header = (props) => {
         </Link>
         {!props.isSearch &&
           <div className="header__controllers">
-            <Find isMain={false} />
+            <Find isMain={props.isMain} />
           </div>
         }
         {!props.isSearch

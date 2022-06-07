@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import Header from "../hoc/Header";
 import chair from "../assets/chair.svg"
 import more from "../assets/more.svg"

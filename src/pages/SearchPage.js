@@ -6,7 +6,7 @@ import Find from "../components/Find";
 const SearchPage = () => {
   return (
     <div className="search__wrapper" style={{background: `url(${bgc}) no-repeat center center / cover`}}>
-      <Header isSearch={true}>
+      <Header isSearch={true} isMain={true} >
         <section className="SearchPage">
           <div className="content">
             <h1>Choose your stay</h1>
@@ -14,7 +14,7 @@ const SearchPage = () => {
               With our world-class hospitality and bold creative flair,
               we create moments that stay with our guests for years to come.
             </p>
-            <Find />
+            <Find isMain={true} />
           </div>
         </section>
 
