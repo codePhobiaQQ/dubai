@@ -185,18 +185,19 @@ body {
 }
 
 .ApartmentsList ul {
-  width: 100%;
+  width: calc(100% + 5px);
+  overflow-y: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  overflow: auto;
-  height: 500px;
   padding-right: 5px;
+  white-space: nowrap;
 }
 
 .ApartmentsList ul li {
   width: calc(50% - var(--apart-gutter));
   margin-bottom: calc(var(--index) * 1.2);
+  break-inside: avoid;
 }
 
 .ApartmentsList ul li img {
