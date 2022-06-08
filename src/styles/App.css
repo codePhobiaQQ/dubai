@@ -202,8 +202,8 @@ body {
 
 .ApartmentsList ul li img {
   width: 100%;
-  object-fit: contain;
-  min-height: 150px;
+  height: calc(var(--index) * 10);
+  object-fit: cover;
   background-color: #838383;
 }
 
