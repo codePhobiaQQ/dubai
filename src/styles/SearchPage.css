@@ -316,7 +316,8 @@
   width: 100%;
 }
 .react-google-flight-datepicker .day.selected.hovered::after,
-.react-google-flight-datepicker .day.selected.hovered:hover::after {
+.react-google-flight-datepicker .day.selected.hovered:hover::after,
+.react-google-flight-datepicker .day:hover::after {
   background-color: var(--accent-color);
   border-radius: 2px;
   overflow: hidden;
@@ -328,4 +329,33 @@
 .react-google-flight-datepicker .day.hovered {
   background-color: #292929;
   color: #eee;
+}
+
+.react-google-flight-datepicker .flipper-button {
+  position: absolute;
+  top: calc(var(--third-page-text) / 3);
+  background-color: transparent;
+  box-shadow: none;
+}
+.react-google-flight-datepicker .flipper-button {
+  fill: #fff;
+}
+.react-google-flight-datepicker .flipper-button:first-child {
+  left: var(--third-page-text);
+}
+.react-google-flight-datepicker .flipper-button:last-child {
+  right: var(--third-page-text);
+  left: initial;
+}
+
+.react-google-flight-datepicker .month-calendar {
+  padding: var(--third-page-text);
+}
+
+.react-google-flight-datepicker .month-calendar {
+  margin-right: 0;
+}
+.react-google-flight-datepicker .month-calendar {
+  width: 50%;
+  height: 100%;
 }
