@@ -1,0 +1,39 @@
+/* ---- Login / Register ---- */
+
+.header__info-actions-popup {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    background-color: var(--often-bg);
+    padding: calc(var(--index) * 0.66);
+    color: var(--often-color);
+    font-size: var(--third-page-text);
+    font-family: "SF300", sans-serif;
+    top: calc(100% + var(--index) * 0.2);
+    width: calc(var(--index) * 6.3);
+    right: 0;
+    border-radius: 4px;
+    transform: translateY(-10px);
+    transition: all .3s ease-in-out;
+    z-index: 100;
+}
+.header__info-actions-popup.active {
+    opacity: 1;
+    pointer-events: inherit;
+    transform: translateY(0);
+}
+.header__info-actions-popup li {
+    transition: color .3s ease-in-out;
+    cursor: pointer;
+}
+.header__info-actions-popup li:hover {
+    color: #eee;
+}
+.header__info-actions-popup li:first-child {
+    padding-bottom: calc(var(--index) * 0.66);
+    border-bottom: 1px solid #292929;
+}
+.header__info-actions-popup li:last-child {
+    padding-top: calc(var(--index) * 0.66);
+}
+

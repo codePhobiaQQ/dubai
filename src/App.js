@@ -1,4 +1,3 @@
-import './styles/App.css';
 import { Route, Routes, Link } from "react-router-dom";
 import SearchPage from "./pages/SearchPage";
 import React from "react";

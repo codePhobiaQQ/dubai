@@ -37,6 +37,9 @@
 :root {
   --accent-color: #A18C50;
 
+  --often-bg: #1F1F1F;
+  --often-color: #838383;
+
   --index: calc(1vh + 1vw);
   --bgc: #121212;
 
@@ -122,6 +125,7 @@ body {
   height: calc(var(--header--button-info-height));
   width: calc(var(--header--button-info-height) * 2.5);
   border-radius: var(--header--button-info-height);
+  position: relative;
 }
 
 .header__info span:first-child {
@@ -130,9 +134,6 @@ body {
   font-family: "SF500", sans-serif;
   color: #838383;
   font-size: calc(var(--header--button-info-height) / 2.5);
-}
-.header__info_man span:first-child {
-  width: 50%;
 }
 
 .header__info span:last-child {
@@ -144,8 +145,17 @@ body {
   height: 100%;
 }
 
-.header__info_man span:last-child {
+.header__info_man span:first-child {
   width: 50%;
+}
+
+.header__hamburger-icon {
+  width: 50%;
+  height: 100%;
+  border-left: 1px solid #131313;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header__info span:last-child img {
