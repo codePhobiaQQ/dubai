@@ -1,9 +1,11 @@
 import React, {useEffect, useRef} from 'react';
 import del from "../../assets/delete.svg";
 import DataRangePicker from "../DataRangePicker";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const Date = (props) => {
   const popup = useRef(null)
+  const {width, height} = useWindowSize()
 
   const dateHandler = () => {
     if (props.whatOpen != 2) {
@@ -14,7 +16,7 @@ const Date = (props) => {
   useEffect(() => {
     const windowHeight = document.querySelector('.calendar-content').clientHeight
     popup.current.setAttribute("style", `height: ${windowHeight}px;`)
-  }, [])
+  }, [width, height])
 
   return (
     <div onClick={dateHandler} className="findEl__input">
