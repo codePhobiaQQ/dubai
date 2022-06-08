@@ -383,10 +383,10 @@
   height: calc(var(--index) * 0.8);
 }
 .react-google-flight-datepicker .flipper-button:first-child {
-  left: calc(var(--third-page-text) * 2.8);
+  left: calc(var(--index) * .8);
 }
 .react-google-flight-datepicker .flipper-button:last-child {
-  right: calc(var(--third-page-text) * 2.8);
+  right: calc(var(--index) * .8);
   left: initial;
 }
 .react-google-flight-datepicker .calendar-content {
