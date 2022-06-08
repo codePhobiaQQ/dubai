@@ -16,7 +16,7 @@ const Date = (props) => {
   useEffect(() => {
     const windowHeight = document.querySelector('.calendar-content').clientHeight
     popup.current.setAttribute("style", `height: ${windowHeight}px;`)
-  }, [width, height])
+  }, [width, height, props.whatOpen])
 
   return (
     <div onClick={dateHandler} className="findEl__input">
