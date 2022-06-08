@@ -287,7 +287,45 @@
 
 /* ----- datePopup ------ */
 
-.findEl__input .datePopup {
-  width: calc(200% + var(--index) * 0.7);
+.react-google-flight-datepicker {
+  font-family: "SF500", sans-serif;
 }
 
+.findEl__input .datePopup {
+  width: calc(200% + var(--index) * 0.7);
+  padding: 0;
+  overflow: hidden;
+  height: calc(var(--index) * 20);
+}
+.react-google-flight-datepicker .date-picker {
+  padding: 0;
+}
+.react-google-flight-datepicker .calendar-wrapper {
+  color: #eee;
+  background-color: #1F1F1F;
+}
+.react-google-flight-datepicker .month-name {
+  color: #eee;
+  font-size: var(--third-page-text);
+}
+
+.react-google-flight-datepicker .weekdays .weekday {
+  color: var(--accent-color);
+}
+.react-google-flight-datepicker .dialog-date-picker {
+  width: 100%;
+}
+.react-google-flight-datepicker .day.selected.hovered::after,
+.react-google-flight-datepicker .day.selected.hovered:hover::after {
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  overflow: hidden;
+  border: none;
+}
+.react-google-flight-datepicker .day.selected.hovered {
+  color: #121212;
+}
+.react-google-flight-datepicker .day.hovered {
+  background-color: #292929;
+  color: #eee;
+}

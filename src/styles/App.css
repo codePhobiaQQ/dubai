@@ -617,3 +617,18 @@ body {
   border-bottom: 0;
 }
 
+
+
+/* --- DatePopup ---- */
+
+.react-google-flight-datepicker .dialog-date-picker {
+  animation: showPopup 0.2s forwards;
+}
+.react-google-flight-datepicker .dialog-header,
+.react-google-flight-datepicker .date-picker-input,
+.react-google-flight-datepicker .dialog-footer {
+  display: none;
+}
+.react-google-flight-datepicker .calendar-wrapper {
+  margin: 0;
+}

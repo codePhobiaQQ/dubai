@@ -1,5 +1,6 @@
 import React from 'react';
 import del from "../../assets/delete.svg";
+import DataRangePicker from "../DataRangePicker";
 
 const Date = (props) => {
   const dateHandler = () => {
@@ -19,8 +20,8 @@ const Date = (props) => {
       <div className={props.whatOpen == 2 ? "findEl__input-delete active" : "findEl__input-delete"}>
         <img src={del} alt="del"/>
       </div>
-      <div className={props.whatOpen == 2 ? "datePopup whenPopup active popup" : "whenPopup popup"}>
-        test
+      <div className={props.whatOpen == 2 ? "datePopup whenPopup active popup" : "datePopup whenPopup popup"}>
+        <DataRangePicker />
       </div>
     </div>
   );
