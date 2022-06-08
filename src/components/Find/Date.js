@@ -12,7 +12,6 @@ const Date = (props) => {
       props.setWhatOpen(2)
     }
   }
-
   useEffect(() => {
     const windowHeight = document.querySelector('.calendar-content').clientHeight
     popup.current.setAttribute("style", `height: ${windowHeight}px;`)
