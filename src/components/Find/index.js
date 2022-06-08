@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import Result from "./Result";
 import Where from "./Where";
 import Guests from "./Guests";
@@ -12,6 +12,21 @@ const Find = (props) => {
       setWhatOpen(0)
     }
   }
+
+  const keydownHandler = (e) => {
+    if (whatOpen != 0) {
+      if (e.key =="Enter" && whatOpen != 3) {
+        setWhatOpen((whatOpen + 1) % 4)
+      }
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('keydown', keydownHandler)
+    return () => {
+      window.removeEventListener('keydown', keydownHandler)
+    }
+  }, [whatOpen])
 
   return (
     <>
