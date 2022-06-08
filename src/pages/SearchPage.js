@@ -17,8 +17,6 @@ const SearchPage = () => {
             <Find isMain={true} />
           </div>
         </section>
-
-       {/*<DataRangePicker />*/}
       </Header>
     </div>
   );

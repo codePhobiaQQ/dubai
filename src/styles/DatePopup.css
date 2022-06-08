@@ -1,0 +1,160 @@
+
+/* --- DatePopup ---- */
+
+.react-google-flight-datepicker .dialog-date-picker {
+  animation: showPopup 0.2s forwards;
+}
+.react-google-flight-datepicker .dialog-header,
+.react-google-flight-datepicker .date-picker-input,
+.react-google-flight-datepicker .dialog-footer {
+  display: none;
+}
+.react-google-flight-datepicker .calendar-wrapper {
+  margin: 0;
+}
+
+.react-google-flight-datepicker {
+  font-family: "SF500", sans-serif;
+  height: 100%;
+}
+
+.findEl__input .datePopup {
+  /*width: calc(200% + var(--index) * 0.7);*/
+  width: 606px;
+  padding: 0;
+  overflow: hidden;
+  height: 295px;
+  max-height: inherit;
+}
+.react-google-flight-datepicker .date-picker {
+  padding: 0;
+  height: 100%;
+}
+.react-google-flight-datepicker .calendar-wrapper {
+  color: #eee;
+  background-color: #1F1F1F;
+}
+.react-google-flight-datepicker .month-name {
+  color: #eee;
+  font-size: 16px;
+  margin-bottom: 16.5px;
+  font-family: "SF500", sans-serif;
+}
+
+.react-google-flight-datepicker .weekdays {
+  height: 32px;
+}
+
+.react-google-flight-datepicker .week-container {
+  width: 266px;
+}
+
+.react-google-flight-datepicker .weekdays .weekday {
+  color: var(--accent-color);
+  width: 38px;
+  height: 32px;
+  /*font-size: calc(var(--third-page-text) / 1);*/
+  border-radius: 0;
+  font-size: 12px;
+}
+.react-google-flight-datepicker .day {
+  /*font-size: calc(var(--third-page-text) / 1);*/
+  width: 38px;
+  height: 32px;
+  margin: 0;
+  color: #eee;
+  font-size: 14px;
+}
+.react-google-flight-datepicker .day.selected.hovered.end,
+.react-google-flight-datepicker .day.selected.hovered,
+.react-google-flight-datepicker .day:hover::after {
+  background: var(--accent-color);
+}
+.react-google-flight-datepicker .day::after {
+  width: var(--third-page-text);
+  height: var(--third-page-text);
+  border-radius: 0;
+}
+.react-google-flight-datepicker .day.hovered.end {
+  background: var(--accent-color);
+}
+.react-google-flight-datepicker .day:hover::after {
+  height: 100%;
+  width: 100%;
+  background-color: var(--accent-color) !important;
+  left: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  border-radius: 0 !important;
+  padding: 0;
+}
+
+.react-google-flight-datepicker .dialog-date-picker {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
+  top: 0;
+  left: 0;
+}
+
+.react-google-flight-datepicker .day.selected::after {
+  background-color: transparent;
+}
+.react-google-flight-datepicker .day.selected.hovered::after,
+.react-google-flight-datepicker .day.selected.hovered:hover::after,
+.react-google-flight-datepicker .day:hover::after {
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  overflow: hidden;
+  border: none;
+}
+.react-google-flight-datepicker .day.selected.hovered {
+  color: #121212;
+}
+.react-google-flight-datepicker .day.hovered {
+  background-color: #292929;
+  color: #eee;
+}
+
+.react-google-flight-datepicker .flipper-button {
+  position: absolute;
+  top: 23px;
+  background-color: transparent;
+  box-shadow: none;
+}
+.react-google-flight-datepicker .flipper-button {
+  fill: #fff;
+  width: 16px;
+  height: 16px;
+}
+.react-google-flight-datepicker .flipper-button:first-child {
+  left: 27px;
+}
+.react-google-flight-datepicker .flipper-button:last-child {
+  left: calc(100% - 3px);
+}
+.react-google-flight-datepicker .calendar-content {
+  padding: 23px 16px 20px 16px;
+  height: 100%;
+}
+.react-google-flight-datepicker .month-calendar {
+  /*padding: 20px 12px 24px 32px;*/
+  width: 266px;
+  margin-right: 0;
+}
+.react-google-flight-datepicker .dialog-content {
+  border: none;
+  box-shadow: none;
+  height: 100%;
+}
+.react-google-flight-datepicker .month-calendar:last-child {
+  display: none;
+}
+.react-google-flight-datepicker .month-calendar:nth-child(3) {
+  margin-left: auto;
+}
+.react-google-flight-datepicker .calendar-wrapper {
+  min-height: inherit;
+  height: 100%;
+}

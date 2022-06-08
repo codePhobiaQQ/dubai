@@ -9,11 +9,6 @@ function App() {
   return (
     <>
       <div className="App">
-        {/*<header>*/}
-        {/*  <Link to="/">search</Link>*/}
-        {/*  <Link to="/details">search</Link>*/}
-        {/*  <Link to="/result">search</Link>*/}
-        {/*</header>*/}
       </div>
       <Routes>
         <Route path="/" element={<SearchPage />} />
