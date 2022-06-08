@@ -295,7 +295,8 @@
   width: calc(200% + var(--index) * 0.7);
   padding: 0;
   overflow: hidden;
-  height: calc(var(--index) * 20);
+  height: calc(var(--index) * 12);
+  max-height: inherit;
 }
 .react-google-flight-datepicker .date-picker {
   padding: 0;
@@ -306,14 +307,53 @@
 }
 .react-google-flight-datepicker .month-name {
   color: #eee;
-  font-size: var(--third-page-text);
+  font-size: calc(var(--third-page-text) * 0.8);
 }
 
 .react-google-flight-datepicker .weekdays .weekday {
   color: var(--accent-color);
+  width: calc(100% / 7);
+  height: calc(var(--index) * 0.8);
+  font-size: calc(var(--third-page-text) / 1.5);
+  border-radius: 0;
 }
+.react-google-flight-datepicker .day {
+  width: calc(100% / 7);
+  font-size: calc(var(--third-page-text) / 1.5);
+  height: calc(var(--index) * 0.8);
+}
+.react-google-flight-datepicker .day.selected.hovered.end,
+.react-google-flight-datepicker .day.selected.hovered,
+.react-google-flight-datepicker .day:hover::after {
+  background: var(--accent-color);
+}
+.react-google-flight-datepicker .day::after {
+  width: var(--third-page-text);
+  height: var(--third-page-text);
+  border-radius: 0;
+}
+.react-google-flight-datepicker .day.hovered.end {
+  background: var(--accent-color);
+}
+.react-google-flight-datepicker .day:hover::after {
+  height: calc(var(--index) * 0.8);
+  width: 100%;
+  background-color: var(--accent-color) !important;
+  left: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  border-radius: 0 !important;
+  padding: 0;
+}
+
 .react-google-flight-datepicker .dialog-date-picker {
   width: 100%;
+  height: calc(var(--index) * 0.8);
+  margin-bottom: 0;
+}
+.react-google-flight-datepicker .day.selected::after {
+  background-color: transparent;
 }
 .react-google-flight-datepicker .day.selected.hovered::after,
 .react-google-flight-datepicker .day.selected.hovered:hover::after,
@@ -347,15 +387,20 @@
   right: var(--third-page-text);
   left: initial;
 }
-
+.react-google-flight-datepicker .calendar-content {
+  padding: 0;
+}
 .react-google-flight-datepicker .month-calendar {
   padding: var(--third-page-text);
 }
-
+.react-google-flight-datepicker .dialog-content {
+  border: none;
+  box-shadow: none;
+}
 .react-google-flight-datepicker .month-calendar {
   margin-right: 0;
 }
-.react-google-flight-datepicker .month-calendar {
-  width: 50%;
-  height: 100%;
+
+.react-google-flight-datepicker .day::after {
+
 }
