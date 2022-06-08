@@ -295,7 +295,7 @@
   width: calc(200% + var(--index) * 0.7);
   padding: 0;
   overflow: hidden;
-  height: calc(var(--index) * 12);
+  height: calc(var(--index) * 8.3);
   max-height: inherit;
 }
 .react-google-flight-datepicker .date-picker {
@@ -373,18 +373,20 @@
 
 .react-google-flight-datepicker .flipper-button {
   position: absolute;
-  top: calc(var(--third-page-text) / 3);
+  top: calc(var(--third-page-text) / 1.6);
   background-color: transparent;
   box-shadow: none;
 }
 .react-google-flight-datepicker .flipper-button {
   fill: #fff;
+  width: calc(var(--index) * 0.8);
+  height: calc(var(--index) * 0.8);
 }
 .react-google-flight-datepicker .flipper-button:first-child {
-  left: var(--third-page-text);
+  left: calc(var(--third-page-text) * 2.8);
 }
 .react-google-flight-datepicker .flipper-button:last-child {
-  right: var(--third-page-text);
+  right: calc(var(--third-page-text) * 2.8);
   left: initial;
 }
 .react-google-flight-datepicker .calendar-content {
