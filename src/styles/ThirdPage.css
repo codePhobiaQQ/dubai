@@ -13,6 +13,7 @@
 .container__inner {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .inner-left-container {
@@ -307,8 +308,6 @@
   color: #181818;
   font-family: "SF700", sans-serif;
 }
-
-
 
 .DetailPageThings {
 

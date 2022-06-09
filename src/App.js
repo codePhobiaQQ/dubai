@@ -3,6 +3,7 @@ import SearchPage from "./pages/SearchPage";
 import React from "react";
 import ResultPage from "./pages/ResultPage";
 import DetailPage from "./pages/DetailPage";
+import ConfirmPay from "./pages/ConfirmPay";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<SearchPage />} />
         <Route path="/result" element={<ResultPage />} />
         <Route path="/details" element={<DetailPage />} />
+        <Route path="/confirm-pay" element={<ConfirmPay />} />
       </Routes>
     </>
   );
