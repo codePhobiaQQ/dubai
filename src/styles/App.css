@@ -36,6 +36,7 @@
 
 :root {
   --accent-color: #A18C50;
+  --red-color: #B02D2D;
 
   --often-bg: #1F1F1F;
   --often-color: #838383;
@@ -98,12 +99,13 @@ body {
 
 .inputMix {
   border-radius: 4px;
-  margin-bottom: var(--third-page-text);
+  margin-bottom: calc(var(--third-page-text) * 1.2);
   display: flex;
   align-items: center;
   background: var(--often-bg);
   height: calc(var(--index) * 2);
   position: relative;
+  /*overflow: hidden;*/
 }
 
 .inputMix span.labelInput {
@@ -115,29 +117,44 @@ body {
   color: #838383;
 }
 
+.inputMix span.InputError {
+  position: absolute;
+  top: calc(100% + var(--index) * 0.07);
+  left: calc(var(--index) * 0.66);
+  font-size: calc(var(--index) * 0.45);
+  z-index: 10;
+  color: var(--red-color);
+  transition: color .3s ease-in-out;
+  font-family: "SF300", sans-serif;
+}
+
 .inputMix input {
   width: 100%;
   height: 100%;
   font-family: "SF500", sans-serif;
   padding: calc(var(--index) * 0.66);
-  color: var(--often-color);
+  color: #eee;
   font-size: var(--third-page-text);
   text-align: left;
   border: none;
   transition: all .3s ease-in-out;
   background-color: transparent;
+  overflow: hidden;
 }
 
 .inputMix.active input {
-  height: 50%;
-  padding-top: 0;
+  /*height: 50%;*/
+  padding-top: calc(var(--index) );
   padding-bottom: calc(var(--index) * 0.33);
   margin-top: auto;
-  color: #eee;
 }
 
 .inputMix.active span.labelInput {
   margin-top: calc(var(--index) * -0.66);;
+}
+
+.inputMix span.labelInput.error {
+  color: var(--red-color);
 }
 
 /*----- Header -----*/
