@@ -30,7 +30,7 @@
 
 .DetailPageMain h2  {
   color: #eee;
-  font-size: calc(var(--index) * 1.6);
+  font-size: var(--title-size);
   font-family: "OS600", sans-serif;
   margin-bottom: calc(var(--index) * .45);
 }

@@ -43,6 +43,8 @@
   --index: calc(1vh + 1vw);
   --bgc: #121212;
 
+  --title-size: calc(var(--index) * 1.6);
+
   --apart-gutter: 14px;
   --card-width: 50%;
   --color-text: #eee;
@@ -90,6 +92,52 @@ body {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+}
+
+/*----- Often Input -----*/
+
+.inputMix {
+  border-radius: 4px;
+  margin-bottom: var(--third-page-text);
+  display: flex;
+  align-items: center;
+  background: var(--often-bg);
+  height: calc(var(--index) * 2);
+  position: relative;
+}
+
+.inputMix span.labelInput {
+  transition: all .3s ease-in-out;
+  font-family: "SF500", sans-serif;
+  position: absolute;
+  left: calc(var(--index) * 0.66);
+  font-size: var(--third-page-text);
+  color: #838383;
+}
+
+.inputMix input {
+  width: 100%;
+  height: 100%;
+  font-family: "SF500", sans-serif;
+  padding: calc(var(--index) * 0.66);
+  color: var(--often-color);
+  font-size: var(--third-page-text);
+  text-align: left;
+  border: none;
+  transition: all .3s ease-in-out;
+  background-color: transparent;
+}
+
+.inputMix.active input {
+  height: 50%;
+  padding-top: 0;
+  padding-bottom: calc(var(--index) * 0.33);
+  margin-top: auto;
+  color: #eee;
+}
+
+.inputMix.active span.labelInput {
+  margin-top: calc(var(--index) * -0.66);;
 }
 
 /*----- Header -----*/
