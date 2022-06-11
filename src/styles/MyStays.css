@@ -81,3 +81,34 @@
 .StayElemColor {
   padding-top: calc(var(--index) * 0.55);
 }
+
+.singleStayWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.singleStay {
+  width: calc(50% - var(--index) * 0.5);
+}
+
+.singleStayWrapper .singleStayLeft img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.singleStayRight h3 {
+  font-size: calc(var(--index) * 1.3);
+  color: #eee;
+  font-family: "OS600", sans-serif;
+}
+
+.singleStayRight p {
+  font-size: var(--third-page-text);
+  line-height: calc(var(--third-page-text) * 1.9);
+  margin: calc(var(--index) * .66) 0;
+  max-width: 80%;
+  font-family: "SF500", sans-serif;
+  color: #D0D0D0;
+}

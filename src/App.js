@@ -5,6 +5,7 @@ import ResultPage from "./pages/ResultPage";
 import DetailPage from "./pages/DetailPage";
 import ConfirmPay from "./pages/ConfirmPay";
 import MyStays from "./pages/MyStays";
+import MyStay from "./pages/MyStay";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Route path="/result" element={<ResultPage />} />
         <Route path="/details" element={<DetailPage />} />
         <Route path="/confirm-pay" element={<ConfirmPay />} />
-        <Route path="/my-stages" element={<MyStays />} />
+        <Route path="/my-stays" element={<MyStays />} />
+        <Route path="/no-stay" element={<MyStay />} />
       </Routes>
     </>
   );
