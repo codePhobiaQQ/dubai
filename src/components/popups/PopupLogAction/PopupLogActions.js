@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import close from "../../../assets/close.svg";
 import Login from "./Login";
+import Registration from "./Registration";
 
 const PopupLogActions = ({ isLogActionsOpen, setIsLogActionsOpen, setWhatOpen, whatOpen }) => {
 
@@ -16,8 +17,8 @@ const PopupLogActions = ({ isLogActionsOpen, setIsLogActionsOpen, setWhatOpen, w
           src={close} alt="close"
           onClick={() => setIsLogActionsOpen(false)}
         />
-        <Login />
-
+        <Login whatOpen={whatOpen} setWhatOpen={setWhatOpen} />
+        <Registration whatOpen={whatOpen} setWhatOpen={setWhatOpen} />
       </div>
     </div>
   );

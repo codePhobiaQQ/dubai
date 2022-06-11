@@ -1,9 +1,9 @@
 import React from 'react';
 import CustomInput from "../../UI/CustomInput";
+import * as yup from "yup";
 import {useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
-import * as yup from "yup";
-import {AnimatePresence, motion} from "framer-motion";
+import {motion, AnimatePresence} from "framer-motion";
 import {fadeInMotion} from "./motion";
 
 const schema = yup.object({
@@ -11,7 +11,7 @@ const schema = yup.object({
   Password: yup.string().required("Password can`t be empty"),
 }).required();
 
-const Login = ({setWhatOpen, whatOpen}) => {
+const Registration = ({setWhatOpen, whatOpen}) => {
   const { register, handleSubmit, formState: { errors }, getValues, setValue } = useForm({
     resolver: yupResolver(schema),
     mode: "onBlur",
@@ -25,16 +25,16 @@ const Login = ({setWhatOpen, whatOpen}) => {
   return (
     <>
       <AnimatePresence>
-        {whatOpen == 1 &&
+        {whatOpen == 2 &&
         <motion.form
-          onSubmit={handleSubmit(onSubmit)}
           variants={fadeInMotion}
           initial="initial"
           animate="visible"
           exit="exit"
-          className={whatOpen == 1 ? "login innerLogAction active" : "login innerLogAction"}
+          onSubmit={handleSubmit(onSubmit)}
+          className={whatOpen == 2 ? "login innerLogAction active" : "login innerLogAction"}
         >
-          <h3>Log in</h3>
+          <h3>Sing Up</h3>
           <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"E-mail"} name={"Email"} register={register}  />
           <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Password"} name={"Password"} register={register} type={"password"} />
 
@@ -58,7 +58,7 @@ const Login = ({setWhatOpen, whatOpen}) => {
           <button className="oftenBtn" type={"submit"}>Log in</button>
           <div className="haveAccount">
             <span>No account? </span>
-            <span onClick={() => setWhatOpen(2)}>Sign up</span>
+            <span onClick={() => setWhatOpen(1)}>Sign up</span>
           </div>
         </motion.form>}
       </AnimatePresence>
@@ -66,4 +66,4 @@ const Login = ({setWhatOpen, whatOpen}) => {
   );
 };
 
-export default Login;
+export default Registration;

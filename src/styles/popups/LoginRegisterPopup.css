@@ -18,7 +18,7 @@
 .HeaderPopupWrapper {
     opacity: 0;
     pointer-events: none;
-    transition: opacity .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .HeaderPopupWrapper.active {
@@ -33,12 +33,7 @@
     width: calc(var(--index) * 20);
     min-height: calc(var(--index) * 15);
     position: relative;
-    transform: translateY(var(--index)) scale(0.9);
-    transition: transform .3s ease-in-out;
-}
-
-.HeaderPopupWrapper.active .HeaderPopup {
-    transform: translateY(0) scale(1);
+    transition: all .3s ease-in-out;
 }
 
 .HeaderPopupWrapper .close {
@@ -49,6 +44,17 @@
     width: var(--index);
     z-index: 10;
     cursor: pointer;
+}
+
+.innerLogAction {
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+}
+
+.innerLogAction.active {
+    opacity: 1;
+    pointer-events: inherit;
 }
 
 .innerLogAction h3 {
@@ -70,6 +76,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 5px;
 }
 
 .innerLogAction .innerWrapper .checkboxWrapper {
