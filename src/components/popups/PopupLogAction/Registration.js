@@ -50,16 +50,15 @@ const Registration = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogAc
               onClick={() => setIsLogActionsOpen(false)}
             />
 
-            <img
-              className="back"
-              src={back} alt="back"
-              onClick={() => setWhatOpen(1)}
-            />
-
             <form
               onSubmit={handleSubmit(onSubmit)}
               className={whatOpen == 2 ? "login innerLogAction active" : "login innerLogAction"}
             >
+              <img
+                className="back"
+                src={back} alt="back"
+                onClick={() => setWhatOpen(1)}
+              />
               <h3>Sing Up</h3>
               <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"First Name"} name={"FirstName"} register={register} />
               <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Last Name"} name={"LastName"} register={register} />
