@@ -6,6 +6,7 @@ import DetailPage from "./pages/DetailPage";
 import ConfirmPay from "./pages/ConfirmPay";
 import MyStays from "./pages/MyStays";
 import MyStay from "./pages/MyStay";
+import MyStayResult from "./pages/MyStayResult";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/confirm-pay" element={<ConfirmPay />} />
         <Route path="/my-stays" element={<MyStays />} />
         <Route path="/no-stay" element={<MyStay />} />
+        <Route path="/my-stays-result" element={<MyStayResult />} />
       </Routes>
     </>
   );
