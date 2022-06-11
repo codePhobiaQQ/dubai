@@ -4,9 +4,17 @@ import { Link } from "react-router-dom";
 import hamburger from './../assets/Hamburger.svg';
 import man from "./../assets/man.svg"
 import Find from "../components/Find";
+import PopupLogActions from "../components/popups/PopupLogActions";
 
 const Header = (props) => {
   const [isRegisterOpen, setRegisterOpen] = useState(false)
+  const [isLogActionsOpen, setIsLogActionsOpen] = useState(false)
+  const [whatOpen, setWhatOpen] = useState(1)
+
+  const openLoginActionsHandler = (numb = 1) => {
+    setIsLogActionsOpen(true)
+    setWhatOpen(numb)
+  }
 
   return (
     <>
@@ -51,10 +59,10 @@ const Header = (props) => {
               : "header__info-actions-popup"}
             >
               <ul>
-                <li>
+                <li onClick={() => openLoginActionsHandler(1)}>
                   Log in
                 </li>
-                <li>
+                <li onClick={() => openLoginActionsHandler(2)}>
                   Sign up
                 </li>
               </ul>
@@ -63,6 +71,12 @@ const Header = (props) => {
         }
       </header>
       {props.children}
+      <PopupLogActions
+        setIsLogActionsOpen={setIsLogActionsOpen}
+        isLogActionsOpen={isLogActionsOpen}
+        whatOpen={whatOpen}
+        setWhatOpen={setWhatOpen}
+      />
     </>
   );
 };

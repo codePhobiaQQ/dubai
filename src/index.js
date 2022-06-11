@@ -13,6 +13,7 @@ import './styles/DatePopup.css';
 import './styles/ConfirmPay.css';
 
 import './styles/popups/HeaderActionsPopup.css';
+import './styles/popups/LoginRegisterPopup.css';
 
 import App from './App';
 
