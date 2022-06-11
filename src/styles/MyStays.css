@@ -126,6 +126,8 @@
   width: 68%;
   padding: calc(var(--index) * 0.66);
   background-color: var(--often-bg);
+  display: flex;
+  justify-content: space-between;
 }
 
 .MyStayResultElemRight {
@@ -134,9 +136,57 @@
   background-color: #161616;
 }
 
-.MyStayResultElemLeft img {
+.MyStayResultElemLeft img.bigImg {
   height: 100%;
   width: calc(var(--index) * 13);
   border-radius: 4px;
   overflow: hidden;
+}
+
+.MyStayResultElemLeftContent {
+  width: calc(100% - var(--index) * 14);
+}
+
+.MyStayResultElemLeftContent h3 {
+  font-size: calc(var(--third-page-text) * 1.4);
+  color: #eee;
+  font-family: "SF500", sans-serif;
+  margin: calc(var(--index) * .4) 0;
+}
+
+.MyStayResultElemLeftContent .detailsEls {
+  display: flex;
+  align-items: center;
+  margin-bottom: calc(var(--index) * 0.5);
+}
+
+.MyStayResultElemLeftContent .detailEl {
+  display: flex;
+  align-items: center;
+  color: #838383
+}
+
+.MyStayResultElemLeftContent .detailEl:first-child {
+  margin-right: var(--index);
+}
+
+.MyStayResultElemLeftContent .detailEl img {
+  width: var(--index);
+  height: var(--index);
+  margin-right: calc(var(--index) * 0.4);
+}
+
+.extraInfo {
+
+}
+
+.extraInfo .extraInfoLine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.extraInfo .extraInfoLine {
+  padding: calc(var(--index) * 0.7) 0;
+  border-top: 1px solid #292929;
 }

@@ -93,6 +93,8 @@ body {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+  color: #eee;
+  font-family: "SF400", sans-serif;
 }
 
 /*----- Often Input -----*/
