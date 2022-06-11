@@ -15,7 +15,7 @@
 }
 
 .StayElem {
-  width: calc(33.3% - var(--index) * 3);
+  width: calc(33.3% - var(--index) * 2.4);
   font-family: "SF400", sans-serif;
 }
 
@@ -33,6 +33,10 @@
   border-bottom: 1px solid #292929;
 }
 
+.StayElemInfoLeft {
+  max-width: 70%;
+}
+
 .StayElemInfo button {
   height: calc(var(--index) * 1.3);
   width: calc(var(--index) * 5.8);
@@ -43,6 +47,7 @@
   color: #eee;
   margin-bottom: 3px;
   font-family: "SF500", sans-serif;
+  white-space: normal;
 }
 
 .StayElemInfoLeft .size {
