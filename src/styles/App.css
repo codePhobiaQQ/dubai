@@ -366,4 +366,43 @@ sup {
 .mapWrapper {
   height: calc(100vh - var(--header-height));
   width: 50%;
+  position: relative;
+}
+
+.metka {
+  position: absolute;
+  width: calc(var(--index) * 8);
+  height: calc(var(--index) * 2);
+  top: 100px;
+  left: 100px;
+  z-index: 1000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #121212;
+  padding: calc(var(--index) * .5)
+}
+
+.metka img {
+  width: calc(var(--index) * .9);
+  height: calc(var(--index) * 1);
+  object-fit: contain;
+  margin-right: calc(var(--index) * .33)
+}
+
+.metka span {
+  text-align: left;
+  font-family: "SF400", sans-serif;
+}
+
+.metka:after {
+  content: '';
+  position: absolute;
+  width: calc(var(--index) * .75);
+  height: calc(var(--index) * .5);
+  left: calc(50% - var(--index) * .325px);
+  top: calc(100% - var(--index) * .2);
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
+  background-color: #121212;
 }

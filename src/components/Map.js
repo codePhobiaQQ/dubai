@@ -1,5 +1,6 @@
 import React from 'react';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import metka from "../assets/metka.svg"
 
 const Map = () => {
   const mapStyles = {
@@ -13,6 +14,13 @@ const Map = () => {
 
   return (
     <div className="mapWrapper">
+      <div className="metka">
+        <img src={metka} alt="metka"/>
+        <span>
+          Deluxe Marina Flat
+          Marina FlatMarina Flat
+        </span>
+      </div>
       <LoadScript
         className="Map"
         googleMapsApiKey='AIzaSyA12E9PdU6N9-yj2_SNmMeXEpSlwcYdrQA'>
