@@ -114,3 +114,29 @@
   font-family: "SF500", sans-serif;
   color: #D0D0D0;
 }
+
+.MyStayResultElem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: calc(var(--index) * 0.8);
+}
+
+.MyStayResultElemLeft {
+  width: 68%;
+  padding: calc(var(--index) * 0.66);
+  background-color: var(--often-bg);
+}
+
+.MyStayResultElemRight {
+  width: 32%;
+  padding: calc(var(--index));
+  background-color: #161616;
+}
+
+.MyStayResultElemLeft img {
+  height: 100%;
+  width: calc(var(--index) * 13);
+  border-radius: 4px;
+  overflow: hidden;
+}

@@ -1,9 +1,18 @@
 import React from 'react';
+import apart from './../../assets/apart1.jpg';
 
 const MyStayResultElem = () => {
   return (
     <div className="MyStayResultElem">
-      stay result
+      <div className="MyStayResultElemLeft">
+        <img src={apart} alt="apart"/>
+        <div className="MyStayResultElemLeftContent">
+          left
+        </div>
+      </div>
+      <div className="MyStayResultElemRight">
+        right
+      </div>
     </div>
   );
 };
