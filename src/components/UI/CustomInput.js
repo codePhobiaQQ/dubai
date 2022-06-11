@@ -63,13 +63,13 @@ const CustomInput = ({
           />
           : <MaskedInput
               maskGenerator={maskHandler(name)}
-              type={name == "CVV" ? "password" : "string"}
+              type={name == "CVV" || name == "Password" ? "password" : "string"}
               {...register(name)}
           />
           :
           <div onClick={() => clickSelectHandler(true)} className="select">
             <div className="result">{selectValue}</div>
-            <input type="text" name={name} />
+            <input type={type} name={name} />
             <div
               onClick={(e) => closeSelectHandler(e, "")}
               className={isSelectPopupOpen ? "helperWrap active" : "helperWrap"}>

@@ -134,8 +134,7 @@ body {
 }
 
 .checkboxWrapper span {
-  margin-bottom: calc(var(--index) * -0.33);
-  margin-left: calc(var(--index) * 0.6);
+  margin-left: calc(var(--index) * 0.4);
   position: relative;
 }
 

@@ -60,7 +60,7 @@ const ConfirmPay = () => {
          <div className="container container_flex">
             <div className="container__inner">
               <div className="inner-left-container">
-                <form autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
+                <form onSubmit={handleSubmit(onSubmit)}>
                   <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"First Name"} name={"FirstName"} register={register} />
                   <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Last Name"} name={"LastName"} register={register} />
                   <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"E-mail"} name={"Email"} register={register} />
@@ -89,7 +89,6 @@ const ConfirmPay = () => {
                     </label>
                     <span>I will present a valid ID during check-in. I also agree to the Terms and Conditions.</span>
                   </div>
-
                   <button className="oftenBtn" type={"submit"}>Confirm and book</button>
                 </form>
               </div>

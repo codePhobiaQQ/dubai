@@ -57,6 +57,10 @@
 
 /* --- Checkbox --- */
 
+.checkboxWrapper {
+  margin-top: calc(var(--index) * 0.33);
+}
+
 .cbx {
   -webkit-perspective: 20px;
   perspective: 20px;
@@ -69,7 +73,7 @@
   transform: translate3d(0, 0, 0);
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: calc(var(--index) * 0.33);
+
 }
 .flip {
   transition: all 0.4s ease;

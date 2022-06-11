@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import hamburger from './../assets/Hamburger.svg';
 import man from "./../assets/man.svg"
 import Find from "../components/Find";
-import PopupLogActions from "../components/popups/PopupLogActions";
+import PopupLogActions from "../components/popups/PopupLogAction/PopupLogActions";
 
 const Header = (props) => {
   const [isRegisterOpen, setRegisterOpen] = useState(false)
@@ -12,6 +12,8 @@ const Header = (props) => {
   const [whatOpen, setWhatOpen] = useState(1)
 
   const openLoginActionsHandler = (numb = 1) => {
+    console.log("here", isRegisterOpen)
+    setRegisterOpen(false)
     setIsLogActionsOpen(true)
     setWhatOpen(numb)
   }
