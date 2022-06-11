@@ -83,8 +83,6 @@
   margin-bottom: -1px;
 }
 
-
-
 .DetailPageMain__navigation li:hover, .DetailPageMain__navigation li.active {
   color: rgba(161, 140, 80, 1);
   border-color: rgba(161, 140, 80, 1);
@@ -158,30 +156,61 @@
   background-color: #D0D0D0;
 }
 
-
-.DetailPageInfo .DetailPageInfo__order-info span:after {
+.DetailPageInfo__order-info span:after {
   display: none;
 }
 
-.DetailPageInfo .DetailPageInfo__order-info {
+.DetailPageInfo__order-info {
   margin-top: calc(var(--index) * 1.7);
   padding: calc(var(--index));
   background-color: #282828;
 }
 
-.DetailPageInfo .DetailPageInfo__order-info {
+.DetailPageInfo__order-info {
   width: calc(100% - var(--third-page-img-gutter));
   margin-left: auto;
 }
 
-.DetailPageInfo .DetailPageInfo__first-row {
+.DetailPageInfo__preview-row {
+  display: flex;
+}
+.DetailPageInfo__preview-row img {
+  width: calc(var(--index) * 4.9);
+  height: calc(var(--index) * 3.5);
+  margin-right: var(--third-page-text);
+  object-fit: cover;
+  margin-bottom: calc(var(--index) * 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.DetailPageInfo__preview-title {
+  color: #eee;
+  font-size: var(--third-page-text);
+  font-family: "SF400", sans-serif;
+  margin-bottom: 3px;
+  display: block;
+}
+
+.DetailPageInfo__preview-param {
+  display: flex;
+  align-items: center;
+  font-size: var(--third-page-text);
+  color: #838383;
+
+}
+
+.DetailPageInfo__preview-param span:first-child {
+  margin-right: calc(var(--index) * 0.33);
+}
+
+.DetailPageInfo__first-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: calc(var(--index) * 0.3);
 }
 
-.DetailPageInfo .DetailPageInfo__row-el {
+.DetailPageInfo__row-el {
   width: calc(50% - var(--index) * 0.15);
   background-color: #1F1F1F;
   border-radius: 4px;
@@ -199,7 +228,7 @@
   font-family: "SF300", sans-serif;
 }
 
-.DetailPageInfo  .DetailPageInfo__row-el_second {
+.DetailPageInfo__row-el_second {
   border-radius: 0;
   margin-right: 0 !important;
   width: 100%;
@@ -209,16 +238,16 @@
   align-items: center;
 }
 
-.DetailPageInfo .DetailPageInfo__row-el span {
+.DetailPageInfo__row-el span {
   display: block;
 }
 
-.DetailPageInfo .DetailPageInfo__row-el span:first-child {
+.DetailPageInfo__row-el span:first-child {
   margin-bottom: 2px;
   color: #838383;
 }
 
-.DetailPageInfo .DetailPageInfo__row-el span:last-child {
+.DetailPageInfo__row-el span:last-child {
   color: #eee;
 }
 

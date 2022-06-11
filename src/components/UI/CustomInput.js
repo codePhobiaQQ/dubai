@@ -1,21 +1,47 @@
-import React, {useState} from 'react';
-import { MaskedInput, createDefaultMaskGenerator, DEFAULT_MASK_RULES  } from 'react-hook-mask';
+import React, {useEffect, useState} from 'react';
+import {maskHandler} from "../mask";
+import { MaskedInput  } from 'react-hook-mask';
+import arrow from './../../assets/arrow.svg';
 
-const maskGenerator = {
-  rules: DEFAULT_MASK_RULES,
-  generateMask: (value) =>
-    (value?.replaceAll('-', '').length ?? 0) <= 13
-      ? '9-(999)-999-99-99'
-      : '9-(999)-999-999-999',
-  transform: (v) => v?.toUpperCase(),
-};
-
-const CustomInput = ({className, type = "string", placeholder, name, errors, register, getValues}) => {
+const CustomInput = ({
+   className,
+   type = "string",
+   placeholder, name,
+   errors,
+   register,
+   getValues,
+   isSelect = false,
+   setValue = null,
+   list = null,
+   imaging = null
+ }) => {
   const [isFocus, setIsFocus] = useState(false)
+
+  const [isSelectPopupOpen, setPopupOpen] = useState(false)
+  const [selectValue, setSelectValue] = useState(null)
 
   const onBlurHandler = () => {
     if (!getValues(name)) setIsFocus(false)
   }
+
+  const clickSelectHandler = () => {
+    setIsFocus(true)
+    setPopupOpen(true)
+  }
+  const closeSelectHandler = (e, value) => {
+    e.stopPropagation()
+    if (value) {
+      setSelectValue(value)
+      setPopupOpen(false)
+      setValue(name, value)
+    }
+    if (!value && !selectValue) {
+      setPopupOpen(false)
+      setIsFocus(false)
+    }
+  }
+
+  console.log(imaging)
 
   return (
       <div
@@ -23,19 +49,45 @@ const CustomInput = ({className, type = "string", placeholder, name, errors, reg
         onBlur={onBlurHandler}
         className={isFocus ? "active " + className : className}
       >
-        <span className={errors[name] ? "labelInput error" : "labelInput"}>{placeholder}</span>
-        {!(name == "Phone")
+        {isSelect ? <img className={isSelectPopupOpen ? "arrow active" : "arrow"} src={arrow} alt="arrow"/> : null}
+        <span className={errors[name] ? "labelInput error" : "labelInput"}>
+          {imaging ? <img className="icon" src={imaging} alt="image"/> : null}
+          {placeholder}
+        </span>
+        {!isSelect ?
+          (!name == "Phone" && !name == "CVV" && !name == "Expiration")
           ? <input
-              name={name}
-              type={type}
-              {...register(name)}
-            />
-          : <MaskedInput
-            maskGenerator={maskGenerator}
+            name={name}
+            type={type}
             {...register(name)}
           />
+          : <MaskedInput
+              maskGenerator={maskHandler(name)}
+              type={name == "CVV" ? "password" : "string"}
+              {...register(name)}
+          />
+          :
+          <div onClick={() => clickSelectHandler(true)} className="select">
+            <div className="result">{selectValue}</div>
+            <input type="text" name={name} />
+            <div
+              onClick={(e) => closeSelectHandler(e, "")}
+              className={isSelectPopupOpen ? "helperWrap active" : "helperWrap"}>
+            </div>
+          </div>
         }
         <span className="InputError">{errors[name] ? errors[name]?.message : ""}</span>
+        {isSelect ? <div className={isSelectPopupOpen ? "selectPopup active" : "selectPopup"}>
+          {list.map((line, index) => (
+            <div
+              key={"lineSelect" + name + index}
+              className="selectLine"
+              onClick={(e) => closeSelectHandler(e, line)}
+            >
+                {line}
+            </div>))
+          }
+        </div> : null}
       </div>
   );
 };
