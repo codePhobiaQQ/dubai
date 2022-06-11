@@ -22,26 +22,26 @@ const Where = (props) => {
       <div className={props.whatOpen == 1 ? "wherePopup active popup" : "wherePopup popup"}>
         <ul>
           <li>
-            Burj Al Arab
+            Dubai
           </li>
-          <li>
-            Jumeirah Burj Al Arab
-          </li>
-          <li>
-            Dubai Burj Al Arab
-          </li>
-          <li>
-            Dubai Burj Al Arab
-          </li>
-          <li>
-            Dubai Burj Al Arab
-          </li>
-          <li>
-            Dubai Burj Al Arab
-          </li>
-          <li>
-            Dubai Burj Al Arab
-          </li>
+          {/*<li>*/}
+          {/*  Jumeirah Burj Al Arab*/}
+          {/*</li>*/}
+          {/*<li>*/}
+          {/*  Dubai Burj Al Arab*/}
+          {/*</li>*/}
+          {/*<li>*/}
+          {/*  Dubai Burj Al Arab*/}
+          {/*</li>*/}
+          {/*<li>*/}
+          {/*  Dubai Burj Al Arab*/}
+          {/*</li>*/}
+          {/*<li>*/}
+          {/*  Dubai Burj Al Arab*/}
+          {/*</li>*/}
+          {/*<li>*/}
+          {/*  Dubai Burj Al Arab*/}
+          {/*</li>*/}
         </ul>
       </div>
     </div>
