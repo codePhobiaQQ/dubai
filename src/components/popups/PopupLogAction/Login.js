@@ -62,9 +62,9 @@ const Login = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogActionsOp
                     </div>
                   </div>
                 </label>
-                <span onClick={() => setWhatOpen(3)}>Remember me</span>
+                <span>Remember me</span>
               </div>
-              <span className="forgot">Forgot password?</span>
+              <span onClick={() => setWhatOpen(3)} className="forgot">Forgot password?</span>
             </div>
             <button className="oftenBtn" type={"submit"}>Log in</button>
             <div className="haveAccount">

@@ -6,10 +6,18 @@ import {yupResolver} from "@hookform/resolvers/yup";
 import {motion, AnimatePresence} from "framer-motion";
 import {fadeInMotion} from "./motion";
 import close from "../../../assets/close.svg";
+import back from "../../../assets/back.svg";
 
 const schema = yup.object({
+  FirstName: yup.string().required("First Name can`t be empty"),
+  LastName: yup.string().required("Last Name can`t be empty"),
+  Country: yup.string().required("Last Name can`t be empty"),
   Email: yup.string().email("Please enter the valid e-mail").required("E-mail can`t be empty"),
   Password: yup.string().required("Password can`t be empty"),
+  Phone: yup.string()
+    .min(5, "Please enter the valid Phone number")
+    .max(20, "Please enter the valid Phone number")
+    .required("Phone can`t be empty"),
 }).required();
 
 const Registration = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogActionsOpen, isLogActionsOpen}) => {
@@ -35,20 +43,32 @@ const Registration = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogAc
           onClick={() => setIsLogActionsOpen(false)}
           className={isLogActionsOpen ? "HeaderPopupWrapper active" : "HeaderPopupWrapper"}
         >
-          <motion.div onClick={(e) => cancelHeaderPopupClose(e)} className="HeaderPopup">
+          <div onClick={(e) => cancelHeaderPopupClose(e)} className="HeaderPopup">
             <img
               className="close"
               src={close} alt="close"
               onClick={() => setIsLogActionsOpen(false)}
             />
-            <form
 
+            <img
+              className="back"
+              src={back} alt="back"
+              onClick={() => setWhatOpen(1)}
+            />
+
+            <form
               onSubmit={handleSubmit(onSubmit)}
               className={whatOpen == 2 ? "login innerLogAction active" : "login innerLogAction"}
             >
               <h3>Sing Up</h3>
+              <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"First Name"} name={"FirstName"} register={register} />
+              <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Last Name"} name={"LastName"} register={register} />
               <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"E-mail"} name={"Email"} register={register}  />
+              <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Confirm E-mail"} name={"ConfirmEmail"} register={register} />
+              <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Country of residence"} name={"Country"} register={register} />
+              <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Phone number"} name={"Phone"} register={register} />
               <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Password"} name={"Password"} register={register} type={"password"} />
+              <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Confirm password"} name={"СonfirmPassword"} register={register} type={"password"} />
 
               <div className="innerWrapper">
                 <div className={errors["checking"] ? "error checkboxWrapper" : "checkboxWrapper"}>
@@ -63,17 +83,17 @@ const Registration = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogAc
                       </div>
                     </div>
                   </label>
-                  <span onClick={() => setWhatOpen(3)}>Remember me</span>
+                  <span onClick={() => setWhatOpen(3)}>By joining, I agree to  One Terms and Conditions
+                  and confirm that I am at least 18 years of age.</span>
                 </div>
-                <span className="forgot">Forgot password?</span>
               </div>
-              <button className="oftenBtn" type={"submit"}>Log in</button>
+              <button className="oftenBtn" type={"submit"}>Sign up</button>
               <div className="haveAccount">
-                <span>No account? </span>
-                <span onClick={() => setWhatOpen(1)}>Sign up</span>
+                <span>Have account? </span>
+                <span onClick={() => setWhatOpen(1)}>Log in</span>
               </div>
             </form>
-          </motion.div>
+          </div>
         </motion.div>)}
       </AnimatePresence>
     </>
