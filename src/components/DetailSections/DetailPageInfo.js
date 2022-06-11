@@ -3,8 +3,9 @@ import bigImg from "../../assets/third-page-big.jpg";
 import detailMore1 from "../../assets/detailMore1.jpg";
 import detailMore2 from "../../assets/detailMore2.jpg";
 import DetailsInfoRight from "./DetailsInfoRight";
+import DetailsInfoRightNew from "./DetailsInfoRightNew";
 
-const DetailPageInfo = () => {
+const DetailPageInfo = ({secondType = false}) => {
   return (
     <section className="DetailPageInfo">
       <div className="container container_flex">
@@ -27,7 +28,10 @@ const DetailPageInfo = () => {
             <span className="DetailPageInfo__more">Show more</span>
           </div>
           <div className="inner-right-container">
-            <DetailsInfoRight />
+            {!secondType
+              ? <DetailsInfoRight />
+              : <DetailsInfoRightNew />
+            }
           </div>
         </div>
       </div>

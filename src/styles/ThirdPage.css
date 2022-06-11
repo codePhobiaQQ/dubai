@@ -217,6 +217,10 @@
   padding: calc(var(--index) * 0.33) calc(var(--index) * 0.66) calc(var(--index) * 0.43)  calc(var(--index) * 0.66)
 }
 
+.DetailPageInfo__row-el.total {
+  color: var(--accent-color);
+}
+
 .DetailPageInfo__second-row {
   border-radius: 4px;
   overflow: hidden;
