@@ -95,6 +95,11 @@ body {
   overflow-x: hidden;
   color: #eee;
   font-family: "SF400", sans-serif;
+  font-size: var(--third-page-text);
+}
+
+sup {
+  margin-top: calc(var(--index) * 0.1);
 }
 
 /*----- Often Input -----*/

@@ -16,7 +16,7 @@ const MyStayResultElem = ({image, name, rooms, size, daying, guests, time}) => {
             </div>
             <div className="detailEl">
               <img src={more} alt="more"/>
-              <span>{size} m2</span>
+              <span>{size} m<sup>2</sup></span>
             </div>
           </div>
           <div className="extraInfo">
@@ -36,7 +36,23 @@ const MyStayResultElem = ({image, name, rooms, size, daying, guests, time}) => {
         </div>
       </div>
       <div className="MyStayResultElemRight">
-        right
+        <div className="details">
+          <span>
+            565 AED x 6 nights
+          </span>
+          <span>
+            12 280 AED
+          </span>
+        </div>
+        <div className="details total">
+          <span>
+            Total cost
+          </span>
+          <span>
+            12 280 AED
+          </span>
+        </div>
+        <button className="oftenBtn">Take a look</button>
       </div>
     </div>
   );
