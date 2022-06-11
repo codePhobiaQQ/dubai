@@ -2,7 +2,7 @@ export const fadeInMotion = {
   initial: {
     opacity: 0,
     transition: {
-      duration: .5
+      duration: 1
     }
   },
   visible: {

@@ -11,15 +11,8 @@ const PopupLogActions = ({ isLogActionsOpen, setIsLogActionsOpen, setWhatOpen, w
 
   return (
     <div onClick={() => setIsLogActionsOpen(false)} className={isLogActionsOpen ? "HeaderPopupWrapper active" : "HeaderPopupWrapper"}>
-      <div onClick={(e) => cancelHeaderPopupClose(e)} className="HeaderPopup">
-        <img
-          className="close"
-          src={close} alt="close"
-          onClick={() => setIsLogActionsOpen(false)}
-        />
-        <Login whatOpen={whatOpen} setWhatOpen={setWhatOpen} />
-        <Registration whatOpen={whatOpen} setWhatOpen={setWhatOpen} />
-      </div>
+      <Login setIsLogActionsOpen={setIsLogActionsOpen} cancelHeaderPopupClose={cancelHeaderPopupClose} whatOpen={whatOpen} setWhatOpen={setWhatOpen} />
+      <Registration isLogActionsOpen={isLogActionsOpen} setIsLogActionsOpen={setIsLogActionsOpen} cancelHeaderPopupClose={cancelHeaderPopupClose} whatOpen={whatOpen} setWhatOpen={setWhatOpen} />
     </div>
   );
 };
