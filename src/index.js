@@ -14,6 +14,7 @@ import './styles/ConfirmPay.css';
 
 import './styles/popups/HeaderActionsPopup.css';
 import './styles/popups/LoginRegisterPopup.css';
+import './styles/MyStays.css';
 
 import App from './App';
 

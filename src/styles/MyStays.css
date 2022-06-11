@@ -1,0 +1,78 @@
+.myStays {
+  padding-top: calc(var(--index) * 3);
+}
+
+.myStays h2 {
+  font-size: calc(var(--index) * 1.7);
+  font-family: "OS600", sans-serif;
+  margin-bottom: calc(var(--index) * 0.8);
+  color: #eee;
+}
+
+.staysWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.StayElem {
+  width: calc(33.3% - var(--index) * 3);
+  font-family: "SF400", sans-serif;
+}
+
+.StayElem img {
+  width: 100%;
+  height: calc(var(--index) * 10);
+  object-fit: cover;
+  margin-bottom: calc(var(--index) * .5);
+}
+
+.StayElemInfo {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: calc(var(--index) * 0.55);
+  border-bottom: 1px solid #292929;
+}
+
+.StayElemInfo button {
+  height: calc(var(--index) * 1.3);
+  width: calc(var(--index) * 5.8);
+}
+
+.StayElemInfoLeft h4 {
+  font-size: calc(var(--index) * 0.66);
+  color: #eee;
+  margin-bottom: 3px;
+  font-family: "SF500", sans-serif;
+}
+
+.StayElemInfoLeft .size {
+  display: flex;
+  align-items: center;
+}
+
+.StayElemInfoLeft .size span {
+  color: #838383;
+  font-size: var(--third-page-text);
+}
+
+.StayElemInfoLeft .size span:first-child {
+  margin-right: calc(var(--index) * 0.33);
+}
+
+.StayElemDetails {
+  padding: calc(var(--index) * 0.55) 0;
+  border-bottom: 1px solid #292929;
+}
+
+.StayElemDetails span, .StayElemColor {
+  font-size: var(--third-page-text);
+  color: #838383;
+}
+
+.StayElemDetails span:first-child {
+  margin-right: calc(var(--index) * 0.5);;
+}
+
+.StayElemColor {
+  padding-top: calc(var(--index) * 0.55);
+}

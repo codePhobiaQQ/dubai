@@ -4,6 +4,7 @@ import React from "react";
 import ResultPage from "./pages/ResultPage";
 import DetailPage from "./pages/DetailPage";
 import ConfirmPay from "./pages/ConfirmPay";
+import MyStays from "./pages/MyStays";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/result" element={<ResultPage />} />
         <Route path="/details" element={<DetailPage />} />
         <Route path="/confirm-pay" element={<ConfirmPay />} />
+        <Route path="/my-stages" element={<MyStays />} />
       </Routes>
     </>
   );
