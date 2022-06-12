@@ -4,7 +4,7 @@ export const fadeInMotion = {
     y: 30,
     // scale: 0.97,
     transition: {
-      duration: 0.5
+      duration: 0.8
     }
   },
   visible: {

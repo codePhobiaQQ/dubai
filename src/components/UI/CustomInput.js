@@ -7,7 +7,7 @@ const CustomInput = ({
    className,
    type = "string",
    placeholder, name,
-   errors,
+   errors = {},
    register,
    getValues,
    isSelect = false,
@@ -41,8 +41,6 @@ const CustomInput = ({
     }
   }
 
-  console.log(imaging)
-
   return (
       <div
         onFocus={() => setIsFocus(true)}
@@ -57,7 +55,6 @@ const CustomInput = ({
         {!isSelect ?
           (!name == "Phone" && !name == "CVV" && !name == "Expiration")
           ? <input
-            name={name}
             type={type}
             {...register(name)}
           />
@@ -69,7 +66,7 @@ const CustomInput = ({
           :
           <div onClick={() => clickSelectHandler(true)} className="select">
             <div className="result">{selectValue}</div>
-            <input type={type} name={name} />
+            <input type={type} {...register(name)} />
             <div
               onClick={(e) => closeSelectHandler(e, "")}
               className={isSelectPopupOpen ? "helperWrap active" : "helperWrap"}>

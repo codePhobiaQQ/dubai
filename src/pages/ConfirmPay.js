@@ -18,6 +18,7 @@ const schema = yup.object({
     .min(5, "Please enter the valid Phone number")
     .max(20, "Please enter the valid Phone number")
     .required("Phone can`t be empty"),
+  Comment: yup.string(),
   CVV: yup.string().length(3, "Please enter the valid CVV").required("CVV can`t be empty"),
   Expiration: yup.string().length(5, "Please enter the valid Expiration").required("Expiration can`t be empty")
 }).required();
@@ -66,7 +67,7 @@ const ConfirmPay = () => {
                   <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"E-mail"} name={"Email"} register={register} />
                   <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Phone number"} name={"Phone"} register={register} />
                   <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Check-in time"} name={"CheckInTime"} register={register} isSelect={true} setValue={setValue} list={timeList} />
-                  <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Comment"} name={"Comment"} register={register} />
+                  <CustomInput getValues={getValues} className={"inputMix"} placeholder={"Comment"} name={"Comment"} register={register} />
                   {/*{errors.exampleRequired && <span>This field is required</span>}*/}
 
                   <h2 className="secondTitle">Pay with</h2>
