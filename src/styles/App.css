@@ -462,6 +462,7 @@ sup {
 
 .metkaTopWrapper button span:nth-child(3) {
   font-size: calc(var(--third-page-text) * 0.8);
+  font-family: "SF300", sans-serif;
 }
 
 .metkaSecond .metkaTop span.title {
