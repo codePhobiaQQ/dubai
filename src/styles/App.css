@@ -323,6 +323,7 @@ sup {
   display: flex;
   align-items: center;
   cursor: pointer;
+  position: relative;
 }
 
 .header__info_man {
@@ -340,7 +341,8 @@ sup {
   font-size: calc(var(--header--button-info-height) / 2.5);
 }
 
-.header__info span:last-child {
+.header__info span:last-child,
+.header__info .hamburgerWrap {
   width: 23%;
   align-items: center;
   border-left: 1px solid #131313;

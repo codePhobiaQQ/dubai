@@ -40,9 +40,29 @@ const Header = (props) => {
             <span className="header__info-who">
               Yura Karmakov
             </span>
-            <span>
+            <span className="hamburgerWrap">
               <img src={hamburger} alt="hamburger"/>
             </span>
+
+            <div className={isRegisterOpen
+              ? "header__info-actions-popup active"
+              : "header__info-actions-popup"}
+            >
+              <ul>
+                <li>
+                  My stays
+                </li>
+                <li>
+                  Wishlists
+                </li>
+                <li>
+                  Account
+                </li>
+                <li>
+                  Log out
+                </li>
+              </ul>
+            </div>
           </div>
             :
           <div

@@ -30,10 +30,14 @@
     color: #eee;
 }
 .header__info-actions-popup li:first-child {
-    padding-bottom: calc(var(--index) * 0.66);
+    padding-top: 0;
+}
+.header__info-actions-popup li {
+    padding: calc(var(--index) * 0.66) 0;
     border-bottom: 1px solid #292929;
 }
 .header__info-actions-popup li:last-child {
-    padding-top: calc(var(--index) * 0.66);
+    padding-bottom: 0;
+    border-bottom: none;
 }
 
