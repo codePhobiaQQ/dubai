@@ -50,9 +50,7 @@ const CustomInput = ({
   }
 
   const togglePasswordHandler = (value) => {
-    console.log(showPassword, value)
     setShowPassword(value)
-    console.log("here")
   }
 
 
