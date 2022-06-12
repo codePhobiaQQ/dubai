@@ -16,9 +16,13 @@ const CustomInput = ({
    imaging = null
  }) => {
   const [isFocus, setIsFocus] = useState(false)
-
   const [isSelectPopupOpen, setPopupOpen] = useState(false)
   const [selectValue, setSelectValue] = useState(null)
+  const [shawPassword, setShawPassword] = useState(true)
+
+  useEffect(() => {
+    if (getValues(name)) setIsFocus(true)
+  }, [])
 
   const onBlurHandler = () => {
     if (!getValues(name)) setIsFocus(false)
@@ -28,6 +32,7 @@ const CustomInput = ({
     setIsFocus(true)
     setPopupOpen(true)
   }
+
   const closeSelectHandler = (e, value) => {
     e.stopPropagation()
     if (value) {
@@ -60,7 +65,9 @@ const CustomInput = ({
           />
           : <MaskedInput
               maskGenerator={maskHandler(name)}
-              type={name == "CVV" || name == "Password" ? "password" : "string"}
+              type={name == "CVV" || name == "Password"
+                ? (shawPassword ? "string" : "password")
+                : "string"}
               {...register(name)}
           />
           :
