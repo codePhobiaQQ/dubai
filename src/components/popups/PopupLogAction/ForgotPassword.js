@@ -31,10 +31,9 @@ const ForgotPassword = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLog
           initial="initial"
           animate="visible"
           exit="exit"
-          onClick={() => setIsLogActionsOpen(false)}
-          className={isLogActionsOpen ? "HeaderPopupWrapper active" : "HeaderPopupWrapper"}
+          onClick={(e) => cancelHeaderPopupClose(e)}
+          className="HeaderPopup"
         >
-          <div onClick={(e) => cancelHeaderPopupClose(e)} className="HeaderPopup">
             <img
               className="close"
               src={close} alt="close"
@@ -42,7 +41,7 @@ const ForgotPassword = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLog
             />
 
             <img
-              className="back"
+              className="backing"
               src={back} alt="back"
               onClick={() => setWhatOpen(1)}
             />
@@ -51,7 +50,7 @@ const ForgotPassword = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLog
               onSubmit={handleSubmit(onSubmit)}
               className={whatOpen == 3 ? "login innerLogAction active" : "login innerLogAction"}
             >
-              <h3>Sing Up</h3>
+              <h3>Forget password</h3>
               <p className="subtitle">
                 Enter the email address associated with your account,
                 and we`ll email you a link to reset your password
@@ -59,7 +58,6 @@ const ForgotPassword = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLog
               <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"E-mail"} name={"Email"} register={register}  />
               <button className="oftenBtn" type={"submit"}>Send reset link</button>
             </form>
-          </div>
         </motion.div>)}
       </AnimatePresence>
     </>

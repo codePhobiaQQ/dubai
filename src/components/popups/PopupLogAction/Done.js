@@ -14,10 +14,9 @@ const Done = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogActionsOpe
           initial="initial"
           animate="visible"
           exit="exit"
-          onClick={() => setIsLogActionsOpen(false)}
-          className={isLogActionsOpen ? "HeaderPopupWrapper active" : "HeaderPopupWrapper"}
+          onClick={(e) => cancelHeaderPopupClose(e)}
+          className="HeaderPopup"
         >
-          <div onClick={(e) => cancelHeaderPopupClose(e)} className="HeaderPopup">
             <img
               className="close"
               src={close} alt="close"
@@ -25,7 +24,7 @@ const Done = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogActionsOpe
             />
 
             <img
-              className="back"
+              className="backing"
               src={back} alt="back"
               onClick={() => setWhatOpen(1)}
             />
@@ -34,7 +33,6 @@ const Done = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogActionsOpe
             <p className="subtitle">
               A link to reset your password has been sent to yuroch@gmail.com.
             </p>
-          </div>
         </motion.div>)}
       </AnimatePresence>
     </>

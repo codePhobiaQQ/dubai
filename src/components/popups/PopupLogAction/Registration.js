@@ -40,25 +40,24 @@ const Registration = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogAc
           initial="initial"
           animate="visible"
           exit="exit"
-          onClick={() => setIsLogActionsOpen(false)}
-          className={isLogActionsOpen ? "HeaderPopupWrapper active" : "HeaderPopupWrapper"}
+          onClick={(e) => cancelHeaderPopupClose(e)}
+          className="HeaderPopup"
         >
-          <div onClick={(e) => cancelHeaderPopupClose(e)} className="HeaderPopup">
             <img
               className="close"
               src={close} alt="close"
               onClick={() => setIsLogActionsOpen(false)}
             />
+          <img
+            className="backing"
+            src={back} alt="back"
+            onClick={() => setWhatOpen(1)}
+          />
 
             <form
               onSubmit={handleSubmit(onSubmit)}
               className={whatOpen == 2 ? "login innerLogAction active" : "login innerLogAction"}
             >
-              <img
-                className="back"
-                src={back} alt="back"
-                onClick={() => setWhatOpen(1)}
-              />
               <h3>Sing Up</h3>
               <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"First Name"} name={"FirstName"} register={register} />
               <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Last Name"} name={"LastName"} register={register} />
@@ -92,7 +91,6 @@ const Registration = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogAc
                 <span onClick={() => setWhatOpen(1)}>Log in</span>
               </div>
             </form>
-          </div>
         </motion.div>)}
       </AnimatePresence>
     </>

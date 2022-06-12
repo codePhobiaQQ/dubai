@@ -11,8 +11,8 @@ const Header = (props) => {
   const [isLogActionsOpen, setIsLogActionsOpen] = useState(false)
   const [whatOpen, setWhatOpen] = useState(1)
 
-  const openLoginActionsHandler = (numb = 1) => {
-    console.log("here", isRegisterOpen)
+  const openLoginActionsHandler = (numb = 1, e) => {
+    e.stopPropagation()
     setRegisterOpen(false)
     setIsLogActionsOpen(true)
     setWhatOpen(numb)
@@ -61,10 +61,10 @@ const Header = (props) => {
               : "header__info-actions-popup"}
             >
               <ul>
-                <li onClick={() => openLoginActionsHandler(1)}>
+                <li onClick={(e) => openLoginActionsHandler(1, e)}>
                   Log in
                 </li>
-                <li onClick={() => openLoginActionsHandler(2)}>
+                <li onClick={(e) => openLoginActionsHandler(2, e)}>
                   Sign up
                 </li>
               </ul>

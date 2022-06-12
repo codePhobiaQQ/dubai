@@ -38,7 +38,8 @@
     transition: all .3s ease-in-out;
 }
 
-.HeaderPopupWrapper .close, .HeaderPopupWrapper .back {
+.HeaderPopupWrapper .close,
+.HeaderPopupWrapper .backing {
     position: absolute;
     top: var(--index);
     right: var(--index);
@@ -48,7 +49,7 @@
     cursor: pointer;
 }
 
-.HeaderPopupWrapper .back {
+.HeaderPopupWrapper .backing {
     right: inherit;
     left: var(--index);
 }
