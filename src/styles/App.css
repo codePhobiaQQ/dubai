@@ -397,7 +397,7 @@ sup {
   padding: calc(var(--index) * .5)
 }
 
-.metka img {
+.metka .metkaImg {
   width: calc(var(--index) * .9);
   height: calc(var(--index) * 1);
   object-fit: contain;
@@ -418,4 +418,89 @@ sup {
   top: calc(100% - var(--index) * .2);
   clip-path: polygon(100% 0, 0 0, 50% 100%);
   background-color: #121212;
+}
+
+.metkaSecond {
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metkaSecond .metkaTop {
+  display: flex;
+  padding: calc(var(--index) * 0.66);
+  height: calc(var(--index) * 4.8);
+  width: calc(var(--index) * 13);
+  background-color: #121212;
+  border-radius: 4px;
+  text-align: left;
+  line-height: calc(var(--third-page-text) * 1.2);
+}
+
+.metkaTopWrapper {
+  width: calc(100% - var(--index) * 5);
+}
+
+.metkaTopWrapper button {
+  width: calc(var(--index) * 5.5);
+  height: calc(var(--index) * 1.33);
+  display: flex;
+  align-items: center;
+}
+
+.metkaTopWrapper button span:first-child {
+  font-family: "SF700", sans-serif;
+}
+
+.metkaTopWrapper button span:nth-child(2) {
+  margin: 0 calc(var(--index) * 0.2);
+}
+
+.metkaTopWrapper button span:nth-child(3) {
+  font-size: calc(var(--third-page-text) * 0.8);
+}
+
+.metkaSecond .metkaTop span.title {
+  margin-bottom: calc(var(--third-page-text) * 0.33);
+  display: block;
+}
+
+.metkaSecond .metkaApart {
+  width: calc(var(--index) * 4.8);
+  height: calc(var(--index) * 3.5);
+  margin-right: calc(var(--index) * 0.5);
+}
+
+.metkaBootom {
+  height: calc(var(--index) * 1.2);
+  width: calc(var(--index) * 3);
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: calc(var(--index) * .2);
+  border-radius: 4px;
+  color: #121212;
+}
+
+.metkaBootom span:first-child {
+  font-family: "SF700", sans-serif;
+  margin-right: calc(var(--index) * .1);
+}
+
+.metkaBootom:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: calc(var(--index) * .75);
+  height: calc(var(--index) * .5);
+  left: calc(50% - var(--index) * .325px);
+  top: calc(100% - var(--index) * .2);
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
+  background-color: #eee;
 }

@@ -36,7 +36,7 @@ const Header = (props) => {
         }
         {!props.isSearch
           ?
-          <div className="header__info">
+          <div className="header__info" onClick={() => setRegisterOpen(true)}>
             <span className="header__info-who">
               Yura Karmakov
             </span>
