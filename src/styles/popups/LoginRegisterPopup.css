@@ -8,14 +8,9 @@
     align-items: center;
     justify-content: center;
     z-index: 100;
-    opacity: 0;
     left: 0;
     background: linear-gradient(180deg, rgba(24, 24, 24, 0.8) 0%, rgba(0, 0, 0, 0.672) 27.05%);
     top: 0;
-    pointer-events: inherit;
-}
-
-.HeaderPopupWrapper {
     opacity: 0;
     pointer-events: none;
     transition: all .3s ease-in-out;
@@ -34,7 +29,7 @@
     /*min-height: calc(var(--index) * 15);*/
     max-height: 90%;
     overflow: auto;
-    position: relative;
+    position: absolute;
     transition: all .3s ease-in-out;
 }
 
@@ -52,17 +47,6 @@
 .HeaderPopupWrapper .backing {
     right: inherit;
     left: var(--index);
-}
-
-.innerLogAction {
-    opacity: 0;
-    pointer-events: none;
-    transition: all .3s ease-in-out;
-}
-
-.innerLogAction.active {
-    opacity: 1;
-    pointer-events: inherit;
 }
 
 .HeaderPopupWrapper h3 {

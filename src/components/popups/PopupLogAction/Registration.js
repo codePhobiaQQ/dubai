@@ -39,7 +39,7 @@ const Registration = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogAc
           variants={fadeInMotion}
           initial="initial"
           animate="visible"
-          exit="exit"
+          // exit="exit"
           onClick={(e) => cancelHeaderPopupClose(e)}
           className="HeaderPopup"
         >
@@ -56,7 +56,7 @@ const Registration = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogAc
 
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className={whatOpen == 2 ? "login innerLogAction active" : "login innerLogAction"}
+              className={"login innerLogAction"}
             >
               <h3>Sing Up</h3>
               <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"First Name"} name={"FirstName"} register={register} />
@@ -86,10 +86,10 @@ const Registration = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogAc
                 </div>
               </div>
               <button className="oftenBtn" type={"submit"}>Sign up</button>
-              <div className="haveAccount">
-                <span>Have account? </span>
-                <span onClick={() => setWhatOpen(1)}>Log in</span>
-              </div>
+              {/*<div className="haveAccount">*/}
+              {/*  <span>Have account? </span>*/}
+              {/*  <span onClick={() => setWhatOpen(1)}>Log in</span>*/}
+              {/*</div>*/}
             </form>
         </motion.div>)}
       </AnimatePresence>

@@ -32,7 +32,7 @@ const Login = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogActionsOp
             variants={fadeInMotion}
             initial="initial"
             animate="visible"
-            exit="exit"
+            // exit="exit"
             onClick={(e) => cancelHeaderPopupClose(e)}
             className="HeaderPopup"
           >
@@ -43,7 +43,7 @@ const Login = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogActionsOp
           />
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className={whatOpen == 1 ? "login innerLogAction active" : "login innerLogAction"}
+            className={"login innerLogAction"}
           >
             <h3>Log in</h3>
             <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"E-mail"} name={"Email"} register={register}  />

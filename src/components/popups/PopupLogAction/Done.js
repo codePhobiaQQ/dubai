@@ -13,7 +13,7 @@ const Done = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogActionsOpe
           variants={fadeInMotion}
           initial="initial"
           animate="visible"
-          exit="exit"
+          // exit="exit"
           onClick={(e) => cancelHeaderPopupClose(e)}
           className="HeaderPopup"
         >

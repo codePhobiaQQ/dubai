@@ -30,7 +30,7 @@ const ForgotPassword = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLog
           variants={fadeInMotion}
           initial="initial"
           animate="visible"
-          exit="exit"
+          // exit="exit"
           onClick={(e) => cancelHeaderPopupClose(e)}
           className="HeaderPopup"
         >
@@ -48,7 +48,7 @@ const ForgotPassword = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLog
 
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className={whatOpen == 3 ? "login innerLogAction active" : "login innerLogAction"}
+              className={"login innerLogAction"}
             >
               <h3>Forget password</h3>
               <p className="subtitle">

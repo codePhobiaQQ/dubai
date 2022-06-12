@@ -2,14 +2,14 @@ export const fadeInMotion = {
   initial: {
     opacity: 0,
     y: 30,
-    // scale: 0.97,
+    scale: 0.97,
     transition: {
-      duration: 0.8
+      duration: 0.5
     }
   },
   visible: {
     opacity: 1,
-    // scale: 1,
+    scale: 1,
     y: 0,
   },
   exit: {
