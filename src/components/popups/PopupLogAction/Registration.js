@@ -65,8 +65,8 @@ const Registration = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogAc
               <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Confirm E-mail"} name={"ConfirmEmail"} register={register} />
               <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Country of residence"} name={"Country"} register={register} />
               <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Phone number"} name={"Phone"} register={register} />
-              <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Password"} name={"Password"} register={register} type={"password"} />
-              <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Confirm password"} name={"СonfirmPassword"} register={register} type={"password"} />
+              <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Password"} name={"Password"} register={register} type={"password"} mayHide={true} />
+              <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Confirm password"} name={"СonfirmPassword"} register={register} type={"password"} mayHide={true} />
 
               <div className="innerWrapper">
                 <div className={errors["checking"] ? "error checkboxWrapper" : "checkboxWrapper"}>

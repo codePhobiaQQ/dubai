@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 import {maskHandler} from "../mask";
 import { MaskedInput  } from 'react-hook-mask';
 import arrow from './../../assets/arrow.svg';
+import hide from './../../assets/hide.svg';
+import show from './../../assets/show.svg';
 
 const CustomInput = ({
    className,
@@ -13,12 +15,13 @@ const CustomInput = ({
    isSelect = false,
    setValue = null,
    list = null,
-   imaging = null
+   imaging = null,
+   mayHide = false,
  }) => {
   const [isFocus, setIsFocus] = useState(false)
   const [isSelectPopupOpen, setPopupOpen] = useState(false)
   const [selectValue, setSelectValue] = useState(null)
-  const [shawPassword, setShawPassword] = useState(true)
+  const [showPassword, setShowPassword] = useState(false)
 
   useEffect(() => {
     if (getValues(name)) setIsFocus(true)
@@ -46,6 +49,13 @@ const CustomInput = ({
     }
   }
 
+  const togglePasswordHandler = (value) => {
+    console.log(showPassword, value)
+    setShowPassword(value)
+    console.log("here")
+  }
+
+
   return (
       <div
         onFocus={() => setIsFocus(true)}
@@ -58,18 +68,24 @@ const CustomInput = ({
           {placeholder}
         </span>
         {!isSelect ?
-          (!name == "Phone" && !name == "CVV" && !name == "Expiration")
+          (!name == "Phone" && !name == "CVV" && !name == "Expiration" && !name == "СonfirmPassword")
           ? <input
             type={type}
             {...register(name)}
           />
-          : <MaskedInput
-              maskGenerator={maskHandler(name)}
-              type={name == "CVV" || name == "Password"
-                ? (shawPassword ? "string" : "password")
-                : "string"}
-              {...register(name)}
-          />
+          : <>
+              <MaskedInput
+                maskGenerator={maskHandler(name)}
+                type={name == "CVV" || name == "Password" || name == "СonfirmPassword"
+                  ? (showPassword ? "string" : "password")
+                  : "string"}
+                {...register(name)}
+                />
+              {mayHide && (
+                showPassword
+                  ? <img onClick={() => togglePasswordHandler(false)} src={show} alt="show" className="hide" />
+                  : <img onClick={() => togglePasswordHandler(true)} src={hide} alt="hide" className="hide" />)}
+            </>
           :
           <div onClick={() => clickSelectHandler(true)} className="select">
             <div className="result">{selectValue}</div>

@@ -47,7 +47,7 @@ const Login = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogActionsOp
           >
             <h3>Log in</h3>
             <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"E-mail"} name={"Email"} register={register}  />
-            <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Password"} name={"Password"} register={register} type={"password"} />
+            <CustomInput getValues={getValues} errors={errors} className={"inputMix"} placeholder={"Password"} name={"Password"} register={register} type={"password"} mayHide={true} />
 
             <div className="innerWrapper">
               <div className={errors["checking"] ? "error checkboxWrapper" : "checkboxWrapper"}>

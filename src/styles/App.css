@@ -263,11 +263,13 @@ sup {
   -moz-box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
 }
+
 .inputMix .selectPopup.active {
   opacity: 1;
   pointer-events: inherit;
   transform: translateY(-10px);
 }
+
 .inputMix .selectPopup .selectLine {
   color: #eee;
   font-family: "SF500", sans-serif;
@@ -276,9 +278,20 @@ sup {
   border-bottom: 1px solid #292929;
   cursor: pointer;
 }
+
+.inputMix .hide {
+  width: calc(var(--index) * 0.66);
+  object-fit: contain;
+  right: calc(var(--index) * 0.66);
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+}
+
 .inputMix .selectPopup .selectLine:first-child {
   padding-top: 0;
 }
+
 .inputMix .selectPopup .selectLine:last-child {
   padding-bottom: 0;
   border: 0;
