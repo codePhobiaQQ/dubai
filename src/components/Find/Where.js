@@ -1,13 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import del from "./../../assets/delete.svg"
 
 const Where = (props) => {
+  const [whatElem, setWhatElem] = useState("")
+
   const whereHandler = (e) => {
     if (e.target.value.length > 0 && props.whatOpen != 1) {
       props.setWhatOpen(1)
     } else if (e.target.value.length > 0 == 0) {
       props.setWhatOpen(0)
     }
+  }
+
+  const clickListHandler = (value) => {
+    console.log("here")
+    setWhatElem(value)
+    props.setWhatOpen(2)
   }
 
   const guestsHandler = () => {
@@ -21,13 +29,13 @@ const Where = (props) => {
     <div onClick={guestsHandler} className="findEl__input">
       <div className="findEl__input-label timeLabel">
         <span>Where are you going?</span>
-        <div className={props.whatOpen == 1 ? "findEl__guest-amount active" : "findEl__guest-amount"}>
-          Dubai
+        <div className={props.whatOpen == 1 || whatElem.length ? "findEl__guest-amount active" : "findEl__guest-amount"}>
+          {whatElem}
         </div>
       </div>
       <div className={props.whatOpen == 1 ? "wherePopup active popup" : "wherePopup popup"}>
         <ul>
-          <li>
+          <li onClick={() => clickListHandler("Dubai")}>
             Dubai
           </li>
         </ul>
