@@ -7,6 +7,8 @@ import Done from "./Done";
 
 const PopupLogActions = ({ isLogActionsOpen, setIsLogActionsOpen, setWhatOpen, whatOpen }) => {
 
+  const [resetEmail, setResetEmail] = useState("")
+
   const cancelHeaderPopupClose = (e) => {
     e.stopPropagation()
   }
@@ -15,8 +17,8 @@ const PopupLogActions = ({ isLogActionsOpen, setIsLogActionsOpen, setWhatOpen, w
     <div onClick={() => setIsLogActionsOpen(false)} className={isLogActionsOpen ? "HeaderPopupWrapper active" : "HeaderPopupWrapper"}>
       <Login setIsLogActionsOpen={setIsLogActionsOpen} cancelHeaderPopupClose={cancelHeaderPopupClose} whatOpen={whatOpen} setWhatOpen={setWhatOpen} />
       {/*<Registration isLogActionsOpen={isLogActionsOpen} setIsLogActionsOpen={setIsLogActionsOpen} cancelHeaderPopupClose={cancelHeaderPopupClose} whatOpen={whatOpen} setWhatOpen={setWhatOpen} />*/}
-      <ForgotPassword isLogActionsOpen={isLogActionsOpen} setIsLogActionsOpen={setIsLogActionsOpen} cancelHeaderPopupClose={cancelHeaderPopupClose} whatOpen={whatOpen} setWhatOpen={setWhatOpen} />
-      <Done isLogActionsOpen={isLogActionsOpen} setIsLogActionsOpen={setIsLogActionsOpen} cancelHeaderPopupClose={cancelHeaderPopupClose} whatOpen={whatOpen} setWhatOpen={setWhatOpen} />
+      <ForgotPassword setResetEmail={setResetEmail} isLogActionsOpen={isLogActionsOpen} setIsLogActionsOpen={setIsLogActionsOpen} cancelHeaderPopupClose={cancelHeaderPopupClose} whatOpen={whatOpen} setWhatOpen={setWhatOpen} />
+      <Done resetEmail={resetEmail} isLogActionsOpen={isLogActionsOpen} setIsLogActionsOpen={setIsLogActionsOpen} cancelHeaderPopupClose={cancelHeaderPopupClose} whatOpen={whatOpen} setWhatOpen={setWhatOpen} />
     </div>
   );
 };

@@ -4,7 +4,7 @@ import {fadeInMotion} from "./motion";
 import close from "../../../assets/close.svg";
 import back from "../../../assets/back.svg";
 
-const Done = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogActionsOpen, isLogActionsOpen}) => {
+const Done = ({resetEmail, setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogActionsOpen, isLogActionsOpen}) => {
   return (
     <>
       <AnimatePresence>
@@ -31,7 +31,7 @@ const Done = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogActionsOpe
 
             <h3>Done!</h3>
             <p className="subtitle">
-              A link to reset your password has been sent to yuroch@gmail.com.
+              A link to reset your password has been sent to {resetEmail}.
             </p>
         </motion.div>)}
       </AnimatePresence>

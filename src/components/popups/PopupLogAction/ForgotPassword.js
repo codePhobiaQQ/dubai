@@ -12,7 +12,7 @@ const schema = yup.object({
   Email: yup.string().email("Please enter the valid e-mail").required("E-mail can`t be empty"),
 }).required();
 
-const ForgotPassword = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogActionsOpen, isLogActionsOpen}) => {
+const ForgotPassword = ({setResetEmail, setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLogActionsOpen, isLogActionsOpen}) => {
   const { register, handleSubmit, formState: { errors }, getValues, setValue } = useForm({
     resolver: yupResolver(schema),
     mode: "onBlur",
@@ -20,6 +20,7 @@ const ForgotPassword = ({setWhatOpen, whatOpen, cancelHeaderPopupClose, setIsLog
 
   const onSubmit = data => {
     setWhatOpen(4)
+    setResetEmail(data.Email)
   };
 
   return (
