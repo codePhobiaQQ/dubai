@@ -16,7 +16,7 @@ const PopupLogActions = ({ isLogActionsOpen, setIsLogActionsOpen, setWhatOpen, w
       <Login setIsLogActionsOpen={setIsLogActionsOpen} cancelHeaderPopupClose={cancelHeaderPopupClose} whatOpen={whatOpen} setWhatOpen={setWhatOpen} />
       {/*<Registration isLogActionsOpen={isLogActionsOpen} setIsLogActionsOpen={setIsLogActionsOpen} cancelHeaderPopupClose={cancelHeaderPopupClose} whatOpen={whatOpen} setWhatOpen={setWhatOpen} />*/}
       <ForgotPassword isLogActionsOpen={isLogActionsOpen} setIsLogActionsOpen={setIsLogActionsOpen} cancelHeaderPopupClose={cancelHeaderPopupClose} whatOpen={whatOpen} setWhatOpen={setWhatOpen} />
-      {/*<Done isLogActionsOpen={isLogActionsOpen} setIsLogActionsOpen={setIsLogActionsOpen} cancelHeaderPopupClose={cancelHeaderPopupClose} whatOpen={whatOpen} setWhatOpen={setWhatOpen} />*/}
+      <Done isLogActionsOpen={isLogActionsOpen} setIsLogActionsOpen={setIsLogActionsOpen} cancelHeaderPopupClose={cancelHeaderPopupClose} whatOpen={whatOpen} setWhatOpen={setWhatOpen} />
     </div>
   );
 };
