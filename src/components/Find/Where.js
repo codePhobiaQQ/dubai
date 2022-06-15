@@ -13,7 +13,6 @@ const Where = (props) => {
   }
 
   const clickListHandler = (value) => {
-    console.log("here")
     setWhatElem(value)
     props.setWhatOpen(2)
   }
