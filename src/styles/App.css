@@ -353,6 +353,11 @@ sup {
   height: 100%;
 }
 
+.hamburgerWrap img {
+  width: calc(var(--index) * 0.7);
+  height: calc(var(--index) * 0.7);
+}
+
 .header__info_man span:first-child {
   width: 50%;
 }
