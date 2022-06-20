@@ -245,12 +245,24 @@
 }
 
 
+/*wherePopup */
+
+.wherePopup {
+  padding: 0 !important;
+}
+/*.wherePopup ul li {*/
+/*  padding: calc(var(--index) * 0.66);*/
+/*}*/
+/*.wherePopup ul li:first-child, .wherePopup ul li:last-child {*/
+/*  padding: inherit;*/
+/*}*/
+
 .wherePopup ul {
 
 }
 
 .wherePopup li {
-  padding: calc(var(--index) * 0.66) 0;
+  padding: calc(var(--index) * 0.66);
   border-bottom: 1px solid #292929;
   font-family: "SF500", sans-serif;
   font-size: var(--third-page-text);
@@ -258,13 +270,16 @@
 }
 
 .wherePopup li:first-child {
-  padding-top: 0;
+  /*padding-top: 0;*/
 }
 
 .wherePopup li:last-child {
-  padding-bottom: 0;
+  /*padding-bottom: 0;*/
   border-bottom: 0;
 }
+
+
+
 
 .helpWrapper, .headerHelper {
   height: 0;
