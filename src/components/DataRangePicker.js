@@ -3,12 +3,13 @@ import {
   RangeDatePicker
 } from "react-google-flight-datepicker";
 
-const DataRangePicker = () => {
+const DataRangePicker = ({onDateChange, dateData}) => {
   return (
-    <RangeDatePicker
-      startDate={new Date(2020, 0, 15)}
-      endDate={new Date(2020, 1, 1)}
-    />
+      React.useCallback(<RangeDatePicker
+        onChange={(startDate, endDate) => onDateChange(startDate, endDate)}
+        startDate={new Date(2020, 0, 15)}
+        endDate={new Date(2020, 1, 1)}
+      />, [])
   );
 }
 
