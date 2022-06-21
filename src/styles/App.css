@@ -385,10 +385,21 @@ sup {
 
 /*----- Map -----*/
 
-.mapWrapper {
+
+
+.mapWrapper, .SearchPage > div {
   height: calc(100vh - var(--header-height));
   width: 50%;
   position: relative;
+}
+.mapWrapper {
+  width: 100%;
+}
+
+.mapWrapper > div {
+  height: 100%;
+  top: 0;
+  position: absolute;
 }
 
 .metka {
