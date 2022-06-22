@@ -75,6 +75,13 @@ const Map = (props) => {
       >
         <Marker
                 name={'Current location'} />
+
+        <div
+          lat={101.99835602}
+          lng={77.01502627}
+        >
+          testing
+        </div>
       </Mapping>
     </div>
 

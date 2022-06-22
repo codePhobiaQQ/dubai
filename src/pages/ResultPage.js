@@ -6,7 +6,7 @@ import Header from "../hoc/Header";
 const ResultPage = () => {
   return (
     <Header>
-      <section className="SearchPage">
+      <section className="SearchPage SearchListPage">
         <ApartmentsList />
         <Map />
       </section>
