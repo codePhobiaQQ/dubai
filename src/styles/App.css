@@ -387,16 +387,16 @@ sup {
 
 
 
-.mapWrapper > div, .SearchListPage > div {
+.SearchListPage .mapWrapper > div, .SearchListPage > div {
   height: calc(100vh - var(--header-height));
   width: 50%;
   position: relative;
 }
-.mapWrapper {
+.SearchListPage .mapWrapper {
   width: 100%;
 }
 
-.mapWrapper > div {
+.SearchListPage .mapWrapper > div {
   height: 100%;
   top: 0;
   position: absolute;
