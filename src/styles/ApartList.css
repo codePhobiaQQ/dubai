@@ -17,6 +17,7 @@
 
 .ApartmentsList ul {
   width: calc(100% + 5px);
+  height: calc(100% - 15px - var(--index) * 1.8) !important;
   overflow-y: auto;
   display: flex;
   flex-wrap: wrap;

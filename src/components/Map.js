@@ -1,11 +1,8 @@
 import React from 'react';
-// import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 // import metka from "../assets/metka.svg"
-// import apart1 from "../assets/apart1.jpg"
-import {Map as Mapping, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import apart1 from "../assets/apart1.jpg"
+import {Map as Mapping, InfoWindow, Polyline, Marker, GoogleApiWrapper} from 'google-maps-react';
 
-
-// const styles = require('./../GoogleMapStyles.json')
 
 const Map = (props) => {
   const defaultProps = {
@@ -16,8 +13,19 @@ const Map = (props) => {
     zoom: 11
   };
 
+  const triangleCoords = [
+    {lat: 25.774, lng: -80.190},
+    {lat: 18.466, lng: -66.118},
+    {lat: 32.321, lng: -64.757},
+    {lat: 25.774, lng: -80.190}
+  ];
+
   return (
+    <>
+
+
     <div className="mapWrapper">
+
       {/*<div className="metka">*/}
       {/*  <img className="metkaImg" src={metka} alt="metka"/>*/}
       {/*  <span>*/}
@@ -25,6 +33,7 @@ const Map = (props) => {
       {/*    Marina FlatMarina Flat*/}
       {/*  </span>*/}
       {/*</div>*/}
+
 
       {/*<div className="metkaSecond">*/}
       {/*  <div className="metkaTop">*/}
@@ -48,24 +57,6 @@ const Map = (props) => {
       {/*  </div>*/}
       {/*</div>*/}
 
-
-      {/*<LoadScript*/}
-      {/*  className="Map"*/}
-      {/*  // googleMapsApiKey='AIzaSyA12E9PdU6N9-yj2_SNmMeXEpSlwcYdrQA'*/}
-      {/*  googleMapsApiKey='AIzaSyCFkGulooYS0wMdguDDYE2bUt5iO8pkS-Y'*/}
-      {/*>*/}
-      {/*  <GoogleMap*/}
-      {/*    mapContainerStyle={mapStyles}*/}
-      {/*    zoom={7}*/}
-      {/*    center={defaultCenter}*/}
-      {/*  >*/}
-      {/*    <Marker*/}
-
-      {/*      position={{defaultCenter}}*/}
-      {/*     />*/}
-      {/*  </GoogleMap>*/}
-      {/*</LoadScript>*/}
-
       <Mapping
         google={props.google}
         zoom={14}
@@ -73,17 +64,34 @@ const Map = (props) => {
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
-        <Marker
-                name={'Current location'} />
 
-        <div
-          lat={101.99835602}
-          lng={77.01502627}
-        >
-          testing
-        </div>
+        <Polyline
+          path={triangleCoords}
+          strokeColor="#0000FF"
+          strokeOpacity={0.8}
+          strokeWeight={2}
+        />
+
+        {/*<Marker*/}
+        {/*  name={'Current location'}*/}
+        {/*>*/}
+          {/*<InfoWindow>*/}
+          {/*  <div>*/}
+          {/*    <h1>test</h1>*/}
+          {/*  </div>*/}
+          {/*</InfoWindow>*/}
+        {/*</Marker>*/}
+
+
+        {/*<InfoWindow>*/}
+        {/*  <div>*/}
+        {/*    <h1>test</h1>*/}
+        {/*  </div>*/}
+        {/*</InfoWindow>*/}
+
       </Mapping>
     </div>
+    </>
 
   );
 };
